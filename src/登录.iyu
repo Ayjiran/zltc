@@ -1,0 +1,433 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="5" did="3" type="LinearLayout">
+<ppt>width=-1
+height=180dp
+orientation=vertical
+gravity=center
+layout_marginTop=30dp</ppt>
+<event></event>
+</View>
+<View id="38" did="5" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+</ppt>
+<event></event>
+</View>
+<View id="6" did="38" type="ImageView">
+<ppt>width=150dp
+height=150dp
+src=@tou.PNG
+ut_centerInParent=true
+</ppt>
+<event></event>
+</View>
+<View id="7" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+padding=10dp</ppt>
+<event></event>
+</View>
+<View id="8" did="7" type="LinearLayout">
+<ppt>width=-1
+height=45dp
+orientation=horizontal
+background=#FAFAFAFA</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="LinearLayout">
+<ppt>width=35dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="10" did="9" type="ImageView">
+<ppt>width=12dp
+height=12dp
+src=@b/job_resume_detial.png</ppt>
+<event></event>
+</View>
+<View id="11" did="8" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="12" did="11" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+textSize=14.5sp
+hint=请输入账号
+textColor=#FF1A2734
+textColorHint=#90000000
+singleLine=true
+maxLength=40
+inputType=textpostaladdress
+background=#0fffffff</ppt>
+<event></event>
+</View>
+<View id="13" did="7" type="LinearLayout">
+<ppt>width=-1
+height=45dp
+orientation=horizontal
+layout_marginTop=10dp
+background=#FAFAFAFA</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="LinearLayout">
+<ppt>width=35dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="15" did="14" type="ImageView">
+<ppt>width=12dp
+height=12dp
+src=@b/job_resume_edit.png</ppt>
+<event></event>
+</View>
+<View id="16" did="13" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="17" did="16" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+textSize=14.5sp
+hint=请输入密码
+textColorHint=#90000000
+textColor=#FF1A2734
+singleLine=true
+maxLength=16
+inputType=textpassword
+background=#0fffffff</ppt>
+<event></event>
+</View>
+<View id="18" did="13" type="LinearLayout">
+<ppt>width=45dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="19" did="18" type="ImageView">
+<ppt>width=15dp
+height=15dp
+src=@b/ic_life_jiami.png</ppt>
+<event></event>
+</View>
+<View id="20" did="7" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=vertical
+layout_marginTop=15dp
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="21" did="20" type="CardView">
+<ppt>width=-1
+height=40dp
+app_CardcornerRadius=25dp
+app_CardElevation=0</ppt>
+<event></event>
+</View>
+<View id="22" did="21" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+background=#FFE0EDFB</ppt>
+<event><eventItme type="clicki">ug(23,"text",加载)
+f(加载?"加载")
+{
+	
+}
+else
+{
+	ug(28,"text",当前)
+	f(当前=="登录账号")
+	{
+		ug(12,"text",username)
+		ug(17,"text",password)
+		f(username==""||password=="")
+		{
+			tw("请输入账号或者密码")
+		}
+		else
+		{
+			slg(username,长度)
+            slg(password,密度)
+			f(长度&lt;"6")
+			{
+				us(39,"visibility","visible")
+                tw("账号小于六位数！")
+			}
+            else f(密度&lt;"6")
+            {
+            	us(39,"visibility","visible")
+                tw("密码小于六位数！")
+            }
+			else
+			{
+				us(23,"text","加载中...")
+				ss(sss.api+"/api/zhzc.php",apiUrl)
+				t() {
+					s postData = "{\"username\":\"" + username + "\", \"password\":\"" + password + "\"}"
+					s headers = "Content-Type=application/json;charset=utf-8||User-Agent=Mozilla/5.0"
+					hs(apiUrl, postData, "utf-8", result)
+					syso(result)
+					ufnsui()
+					{
+						json(result, jo)
+						json(jo, "get", "code", a)
+						syso(a)
+						json(jo, "get", "msg", b)
+						syso(b)
+						f(b?"被注册了")
+						{
+							us(23,"text","注 册")
+							tw("账号已存在/更换账号注册")
+						}
+						else f(b?"成功")
+						{
+							fr("@json/zc.json",data)
+							fn Lottie.setImageLottie(6,data,0,true)
+							t()
+							{
+								stop(2100)
+								fw("$账号.txt",username)
+								fw("$密码.txt",password)
+								uigo("主页.iyu")
+								end()
+							}
+						}
+						else
+						{
+							us(23,"text","注 册")
+							tw(b)
+						}
+					}
+				}
+			}
+		}
+	}
+	else
+	{
+		//登录
+		ug(12,"text",username)
+		ug(17,"text",password)
+		f(username==""||password=="")
+		{
+			tw("请输入账号或者密码")
+		}
+		else
+		{
+			us(23,"text","加载中...")
+			ss(sss.api+"/api/zhdl.php",apiUrl)
+			t() {
+				s postData = "{\"username\":\"" + username + "\", \"password\":\"" + password + "\"}"
+				s headers = "Content-Type=application/json;charset=utf-8||User-Agent=Mozilla/5.0"
+				hs(apiUrl, postData, "utf-8", result)
+				syso(result)
+				ufnsui()
+				{
+					json(result, jo)
+					json(jo, "get", "code", a)
+					syso(a)
+					json(jo, "get", "msg", b)
+					syso(b)
+					f(b?"不存在")
+					{
+						us(23,"text","登 录")
+						tw("账号不存在，请先注册")
+					}
+					else f(b?"成功")
+					{
+						fr("@json/win.json",data)
+						fn Lottie.setImageLottie(6,data,0,true)
+						t()
+						{
+							stop(2100)
+							fw("$账号.txt",username)
+							fw("$密码.txt",password)
+							uigo("主页.iyu")
+							end()
+						}
+					}
+					else
+					{
+						us(23,"text","登 录")
+						tw(b)
+					}
+				}
+			}
+		}
+	}
+}</eventItme></event>
+</View>
+<View id="23" did="22" type="TextView">
+<ppt>width=-2
+height=-2
+text=登 陆
+textSize=15sp
+textColor=#FF3A81FD</ppt>
+<event></event>
+</View>
+<View id="25" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="26" did="25" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+orientation=horizontal
+layout_marginTop=-10dp</ppt>
+<event></event>
+</View>
+<View id="29" did="26" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center
+layout_weight=1
+gravity=center|left
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="30" did="29" type="TextView">
+<ppt>width=-2
+height=-2
+text=Bug提交
+textColor=#30000000
+layout_marginLeft=15dp</ppt>
+<event><eventItme type="clicki">sss wz=sss.联系客服
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="27" did="26" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center
+layout_weight=1
+gravity=center|right
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="28" did="27" type="TextView">
+<ppt>width=-2
+height=-2
+text=注册账号
+textColor=#FF3A81FD
+layout_marginRight=15dp</ppt>
+<event><eventItme type="clicki">ug(28,"text",当前)
+f(当前=="注册账号")
+{
+	us(28,"text","登录账号")
+    us(23,"text","注 册")
+}
+else
+{
+	us(28,"text","注册账号")
+    us(23,"text","登 录")
+}</eventItme></event>
+</View>
+<View id="31" did="25" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=bottom</ppt>
+<event></event>
+</View>
+<View id="32" did="31" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=vertical
+gravity=center
+layout_marginBottom=20dp</ppt>
+<event></event>
+</View>
+<View id="33" did="32" type="TextView">
+<ppt>width=-2
+height=-2
+text=使用或进入即表示已同意
+textColor=#ff454545
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="34" did="32" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="35" did="34" type="TextView">
+<ppt>width=-2
+height=-2
+text=《用户协议》
+textColor=#ff020202
+textSize=14sp
+layout_marginTop=3dp</ppt>
+<event><eventItme type="clicki">ss(sss.api+"/zc/xy.html",sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="36" did="34" type="TextView">
+<ppt>width=-2
+height=-2
+text=与
+textColor=#ff020202
+textSize=14sp
+layout_marginTop=3dp</ppt>
+<event></event>
+</View>
+<View id="37" did="34" type="TextView">
+<ppt>width=-2
+height=-2
+text=《隐私政策》
+textColor=#ff020202
+textSize=14sp
+layout_marginTop=3dp</ppt>
+<event><eventItme type="clicki">ss(sss.api+"/zc/zc.html",sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<UIEventset><eventItme type="loading">fn 全局.状态栏()
+fn 全局.api()
+fn 全局.储存路径()
+fn Lottie.loaddex()</eventItme><eventItme type="loadingComplete">fr("@json/Login.json",data)
+fn Lottie.setImageLottie(6,data,0,true)
+fw("$签到.txt","000")</eventItme></UIEventset>

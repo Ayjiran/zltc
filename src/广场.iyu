@@ -1,0 +1,201 @@
+<View id="5" did="0" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+background=#ffe3edff
+orientation=horizontal
+gravity=center|left
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="6" did="5" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@icon_popup_great.v
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="7" did="5" type="TextView">
+<ppt>width=-2
+height=-2
+text=避免占用空间，只显近七天统计数据！
+textColor=#1E88E5
+textSize=14sp
+focusableintouchmode=true
+marqueerepeatlimit=marquee_forever
+ellipsize=marquee
+singleLine=true
+layout_marginLeft=10dp
+</ppt>
+<event></event>
+</View>
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="2" did="4" type="WebView">
+<ppt>width=-1
+height=350dp
+url=</ppt>
+<event><eventItme type="clicki">ug(广场.2,"url",内容)
+tw(内容)</eventItme></event>
+</View>
+<View id="8" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=实时数据：
+textColor=#1E88E5
+layout_margin=10dp
+textSize=15sp
+textStyle=bold
+layout_marginTop=-30dp</ppt>
+<event></event>
+</View>
+<View id="9" did="4" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+orientation=horizontal
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="10" did="9" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@h/file_add_btn_other.png
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="11" did="9" type="TextView">
+<ppt>width=-2
+height=-2
+text=被看过：
+layout_marginLeft=10dp
+textSize=14sp
+textColor=#ff000000</ppt>
+<event></event>
+</View>
+<View id="12" did="9" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="14" did="9" type="TextView">
+<ppt>width=-2
+height=-2
+text=...
+textColor=#ff000000</ppt>
+<event></event>
+</View>
+<View id="13" did="9" type="TextView">
+<ppt>width=-2
+height=-2
+text=次
+layout_marginRight=10dp
+textColor=#ff000000</ppt>
+<event></event>
+</View>
+<View id="21" did="4" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+orientation=horizontal
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="22" did="21" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@h/file_add_btn_folder.png
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="23" did="21" type="TextView">
+<ppt>width=-2
+height=-2
+text=文件夹：
+layout_marginLeft=10dp
+textSize=14sp
+textColor=#ff000000</ppt>
+<event></event>
+</View>
+<View id="24" did="21" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="25" did="21" type="TextView">
+<ppt>width=-2
+height=-2
+text=...
+textColor=#ff000000</ppt>
+<event></event>
+</View>
+<View id="26" did="21" type="TextView">
+<ppt>width=-2
+height=-2
+text=封
+layout_marginRight=10dp
+textColor=#ff000000</ppt>
+<event></event>
+</View>
+<View id="15" did="4" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+orientation=horizontal
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="16" did="15" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@h/file_add_btn_photo.png
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="17" did="15" type="TextView">
+<ppt>width=-2
+height=-2
+text=文件：
+layout_marginLeft=10dp
+textSize=14sp
+textColor=#ff000000</ppt>
+<event></event>
+</View>
+<View id="18" did="15" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="19" did="15" type="TextView">
+<ppt>width=-2
+height=-2
+text=...
+textColor=#ff000000</ppt>
+<event></event>
+</View>
+<View id="20" did="15" type="TextView">
+<ppt>width=-2
+height=-2
+text=件
+layout_marginRight=10dp
+textColor=#ff000000</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

@@ -1,0 +1,162 @@
+<View id="40" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+clickable=false
+</ppt>
+<event></event>
+</View>
+<View id="19" did="40" type="CardView">
+<ppt>width=250dp
+height=-2
+app_CardBackgroundColor=#ffffff
+app_CardcornerRadius=15dp
+app_CardElevation=5dp
+</ppt>
+<event></event>
+</View>
+<View id="20" did="19" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="29" did="20" type="RelativeLayout">
+<ppt>width=-1
+height=-2
+background=through
+gravity=center
+background=white</ppt>
+<event></event>
+</View>
+<View id="21" did="29" type="ImageView">
+<ppt>width=180dp
+height=110dp
+src=@c99.png
+scaleType=centercrop
+</ppt>
+<event></event>
+</View>
+<View id="46" did="20" type="ScrollView">
+<ppt>width=-1
+height=180dp
+layout_margin=10dp</ppt>
+<event></event>
+</View>
+<View id="22" did="46" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+layout_margin=20dp
+layout_marginTop=-10dp</ppt>
+<event></event>
+</View>
+<View id="23" did="22" type="TextView">
+<ppt>width=-2
+height=-2
+text=欢迎使用-幻隐产品
+textSize=16sp
+textStyle=bold
+textColor=#212121</ppt>
+<event></event>
+</View>
+<View id="24" did="22" type="TextView">
+<ppt>width=-2
+height=-2
+text=(可↑滑查看具体)在您使用本APP[智链图床]之前，请务必了解一下本应用的《隐私政策》以及《用户协议》\n\n在此特别声明：\n\n1.在未经您允许并同意前，本应用不会向任何第三方透露您的隐私信息。\n2.本应用所需要的权限均会在您需要该项服务时，向您获取授权。\n\n点击我同意即表示您已经阅读并且同意该条款，如果不同意请直接卸载本App。
+layout_marginTop=10dp
+textSize=14sp</ppt>
+<event></event>
+</View>
+<View id="42" did="20" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal
+layout_margin=10dp
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="43" did="42" type="TextView">
+<ppt>width=-2
+height=-2
+text=《用户协议》
+textColor=#ff397dff
+textStyle=bold
+textSize=14sp</ppt>
+<event><eventItme type="clicki">ss(sss.api+"/zc/xy.html",sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="45" did="42" type="TextView">
+<ppt>width=-2
+height=-2
+text=《隐私政策》
+textColor=#ff397dff
+textStyle=bold
+textSize=14sp</ppt>
+<event><eventItme type="clicki">ss(sss.api+"/zc/zc.html",sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="26" did="20" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal
+gravity=center
+layout_marginTop=10dp
+layout_marginLeft=20dp
+layout_marginRight=20dp
+layout_marginBottom=10dp</ppt>
+<event></event>
+</View>
+<View id="33" did="26" type="CardView">
+<ppt>width=-1
+height=30dp
+layout_weight=1
+app_CardBackgroundColor=#FFF0F0F0
+app_CardcornerRadius=20dp
+app_CardElevation=0
+visibility=visible</ppt>
+<event></event>
+</View>
+<View id="34" did="33" type="TextView">
+<ppt>width=-1
+height=-1
+text=不同意
+textColor=#FF606060
+gravity=center
+textSize=12sp
+BackgroundRipple=#ffffffff
+visibility=visible</ppt>
+<event><eventItme type="clicki">end()</eventItme></event>
+</View>
+<View id="35" did="26" type="LinearLayout">
+<ppt>width=15dp
+height=-2
+orientation=vertical
+visibility=visible</ppt>
+<event></event>
+</View>
+<View id="27" did="26" type="CardView">
+<ppt>width=-1
+height=30dp
+layout_weight=1
+app_CardBackgroundColor=#ff397dff
+app_CardcornerRadius=20dp
+app_CardElevation=0</ppt>
+<event></event>
+</View>
+<View id="28" did="27" type="TextView">
+<ppt>width=-1
+height=-1
+text=同意
+textColor=#ffffffff
+gravity=center
+textSize=12sp
+</ppt>
+<event><eventItme type="clicki">us(隐私政策.40,"visibility","gone")
+fw("$智链图床/1.txt","1")
+uigo("登录.iyu")
+end()</eventItme></event>
+</View>
+<UIEventset></UIEventset>

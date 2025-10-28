@@ -1,0 +1,412 @@
+<View id="5" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="36" did="5" type="HorizontalScrollView">
+<ppt>width=-1
+height=40dp
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="43" did="36" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="21" did="43" type="LinearLayout">
+<ppt>width=-1
+height=30dp
+orientation=horizontal
+background=white
+gravity=center_vertical
+visibility=gon</ppt>
+<event></event>
+</View>
+<View id="22" did="21" type="CardView">
+<ppt>width=-2
+height=30dp
+layout_marginLeft=10dp
+app_CardcornerRadius=80dp
+app_CardElevation=0dp</ppt>
+<event></event>
+</View>
+<View id="24" did="22" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+background=#ff397dff
+gravity=center</ppt>
+<event><eventItme type="clicki">ug(网盘.46,"text",目录)
+f(目录?"我的目录")
+{
+	
+}
+else
+{
+	fn 刷新主页列表.刷新("")
+}</eventItme></event>
+</View>
+<View id="26" did="24" type="RoundImageView">
+<ppt>width=20dp
+height=20dp
+src=@icon.png
+layout_marginLeft=5dp
+layout_marginRight=5dp</ppt>
+<event></event>
+</View>
+<View id="27" did="24" type="TextView">
+<ppt>width=-2
+height=-2
+text=幻隐图床
+textColor=#ffffffff
+layout_marginRight=15dp
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="28" did="21" type="CardView">
+<ppt>width=-2
+height=30dp
+layout_marginLeft=10dp
+app_CardcornerRadius=80dp
+app_CardElevation=0dp</ppt>
+<event></event>
+</View>
+<View id="29" did="28" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+background=#ffe2e2e2
+gravity=center</ppt>
+<event><eventItme type="clicki">us(网盘.46,"text","阿里云目录/")
+// 读取账号密码（SD卡根目录文件需加%，非根目录需补全路径）
+fr("%账号.txt", username)
+fr("%密码.txt", password)
+// 拼接API地址（确保sss.api已定义，如"http://zl.ayjrw.cn"）
+ss(sss.api+"/api/oss/oss.php", api)
+// 拼接GET请求参数（GET方式直接拼接，无需JSON格式）
+s 提交 = "username=" + username + "&password=" + password
+
+// 开启新线程（避免阻塞主线程）
+t()
+{
+    // 发起GET请求（参数：地址、GET数据、编码、返回结果）
+    hs(api, 提交, "utf-8", dui)
+    
+    // 处理接口无响应场景
+    f(dui == null || dui == "")
+    {
+        ufnsui()
+        {
+            us(网盘.15,"refreshing","false")
+            tws(v, "接口无响应，请检查网络！", 0, "好的")
+        }
+        end()
+    }
+    
+    // 解析JSON为对象（jo为完整JSON对象）
+    json(dui, jo)
+    
+    // 1. 判断PHP返回的成功状态（success字段）
+    json(jo, "get", "success", is_success)
+    f(is_success != true)
+    {
+        // 获取错误信息（PHP返回的error字段）
+        json(jo, "get", "error", err_msg)
+        // 空错误信息补默认值
+        f(err_msg == null || err_msg == "")
+        {
+            s err_msg = "未知错误"
+        }
+        ufnsui()
+        {
+            us(网盘.15,"refreshing","false")
+            tws(v, "请求失败：" + err_msg, 0, "好的")
+        }
+        end()
+    }
+    
+    // 2. 解析items数组（核心数据列表）
+    json(jo, "get", "items", data_obj)
+    // 关键修正：IApp V3.0获取数组长度用"length"而非"size"
+    json(data_obj, "length", size)
+    
+    // 3. 处理无数据场景
+    f(size == 0 || size == null)
+    {
+        ufnsui()
+        {
+            syso("无数据：阿里云目录下无文件/文件夹")
+            us(网盘.15,"refreshing","false")
+            us(网盘.50,"visibility","visible") // 显示无数据提示
+            us(网盘.4,"visibility","gone")     // 隐藏列表
+        }
+        end()
+    }
+    
+    // 4. 初始化列表数据&循环索引
+    s li // 列表数据容器
+    s index = 0 // 数组索引（从0开始）
+    
+    // 循环遍历items数组（索引&lt;长度时循环）
+    w(index &lt; size)
+    {
+        // 解析当前索引的item（文件/文件夹对象）
+        json(data_obj, index, file_item)
+        
+        // 解析核心字段（与PHP返回字段严格匹配）
+        json(file_item, "get", "name", name)       // 名称（文件夹/文件名）
+        json(file_item, "get", "last_modified", time) // 修改时间
+        json(file_item, "get", "path", file_path)  // OSS完整路径
+        json(file_item, "get", "type", item_type)  // 类型（folder/file）
+        
+        // 处理空值：修改时间为空时补默认文本
+        f(time == null || time == "")
+        {
+            s time = "无修改时间"
+        }
+        // 处理空值：名称为空时补默认名
+        f(name == null || name == "")
+        {
+            s name = "未知名称"
+        }
+        
+        // 区分图标：文件夹/文件用不同图标（替换为你的实际图标路径）
+        f(item_type == "folder")
+        {
+            ss("@res/folder.png", src) // 文件夹图标（需放在项目res目录）
+        }
+        else
+        {
+            ss("@res/file.png", src)   // 文件图标（需放在项目res目录）
+        }
+        
+        // 构建列表项（参数序号需与"文件列表.iyu"模板控件ID匹配）
+        // 5=名称控件ID，6=时间控件ID，14=图标控件ID，8=路径（供后续使用）
+        ula(li, 5 = name, 6 = time, 14 = src, 8 = file_path, 3 = "@g/copy_icon_pic.png", 16 = "@you.png")
+        
+        // 索引自增（循环下一个item）
+        s+(1, index)
+    }
+    
+    // 5. 渲染列表到界面（线程中操作界面必须用ufnsui）
+    ufnsui()
+    {
+        // 加载列表（参数：列表控件ID、列表数据、模板文件、宽度-1=自适应、高度-2=自适应）
+        uls(网盘.4, li, "文件列表.iyu", -1, -2)
+        us(网盘.15,"refreshing","false") // 停止刷新动画
+        us(网盘.50,"visibility","gone")  // 隐藏无数据提示
+        us(网盘.4,"visibility","visible")// 显示列表
+    }
+    break // 跳出循环
+}</eventItme></event>
+</View>
+<View id="30" did="29" type="RoundImageView">
+<ppt>width=20dp
+height=20dp
+src=@oss.png
+layout_marginLeft=5dp
+layout_marginRight=5dp</ppt>
+<event></event>
+</View>
+<View id="31" did="29" type="TextView">
+<ppt>width=-2
+height=-2
+text=阿里云OSS
+textColor=#8c8c8c
+layout_marginRight=15dp
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="32" did="21" type="CardView">
+<ppt>width=-2
+height=30dp
+layout_marginLeft=10dp
+app_CardcornerRadius=80dp
+app_CardElevation=0dp</ppt>
+<event></event>
+</View>
+<View id="33" did="32" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+background=#ffe2e2e2
+gravity=center</ppt>
+<event><eventItme type="clicki">tw("无会员/无法切换")</eventItme></event>
+</View>
+<View id="34" did="33" type="RoundImageView">
+<ppt>width=20dp
+height=20dp
+src=@cos.png
+layout_marginLeft=5dp
+layout_marginRight=5dp</ppt>
+<event></event>
+</View>
+<View id="35" did="33" type="TextView">
+<ppt>width=-2
+height=-2
+text=腾讯云COS
+textColor=#8c8c8c
+layout_marginRight=15dp
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="37" did="21" type="CardView">
+<ppt>width=-2
+height=30dp
+layout_marginLeft=10dp
+app_CardcornerRadius=80dp
+layout_marginRight=10dp
+app_CardElevation=0dp</ppt>
+<event></event>
+</View>
+<View id="38" did="37" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+background=#ffe2e2e2
+gravity=center</ppt>
+<event><eventItme type="clicki">tw("无会员/无法切换")</eventItme></event>
+</View>
+<View id="39" did="38" type="RoundImageView">
+<ppt>width=20dp
+height=20dp
+src=@qny.png
+layout_marginLeft=5dp
+layout_marginRight=5dp</ppt>
+<event></event>
+</View>
+<View id="40" did="38" type="TextView">
+<ppt>width=-2
+height=-2
+text=七牛云存储
+textColor=#8c8c8c
+layout_marginRight=15dp
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="15" did="5" type="SwipeRefreshLayout">
+<ppt>width=-1
+height=-1
+ut_below=45</ppt>
+<event><eventItme type="onrefresh">ug(网盘.48,"text",文件)
+fn 刷新主页列表.刷新(文件)</eventItme></event>
+</View>
+<View id="1" did="15" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="49" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="4" did="49" type="RecyclerView">
+<ppt>width=-1
+height=-2
+overScrollMode=never</ppt>
+<event></event>
+</View>
+<View id="50" did="49" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white
+visibility=gone
+gravity=center_horizontal
+clickable=flase</ppt>
+<event></event>
+</View>
+<View id="51" did="50" type="ImageView">
+<ppt>width=130dp
+height=130dp
+src=@null.png
+layout_marginTop=50dp</ppt>
+<event></event>
+</View>
+<View id="52" did="50" type="TextView">
+<ppt>width=-2
+height=-2
+text=-暂无文件-
+textColor=#ff397dff
+textSize=14sp
+layout_marginTop=10dp</ppt>
+<event></event>
+</View>
+<View id="18" did="5" type="CardView">
+<ppt>width=50dp
+height=50dp
+app_CardcornerRadius=50dp
+ut_alignParentBottom=true
+ut_alignParentRight=true
+layout_marginRight=20dp
+layout_marginBottom=20dp
+app_CardElevation=0dp</ppt>
+<event></event>
+</View>
+<View id="20" did="18" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#1E88E5
+gravity=center</ppt>
+<event><eventItme type="clicki">ss 上传="是"
+sit(a, "action", "android.intent.action.PICK")
+sit(a, "type", "*/*")
+uit(a, "result",1)
+dhas(dh,网盘.19, "alpha",0.8,0.9,1)
+dh(dh, "duration", 120)
+dh(dh, "start")
+dhs(dh, 0.9, 1, 0.9, 1, 1, 0.5, 1, 0.5)
+dh(dh, "duration", 300)
+us(网盘.19, "dh", dh)</eventItme></event>
+</View>
+<View id="19" did="20" type="ImageView">
+<ppt>width=25dp
+height=25dp
+src=@tian.png</ppt>
+<event></event>
+</View>
+<View id="45" did="5" type="LinearLayout">
+<ppt>width=-1
+height=20dp
+orientation=horizontal
+ut_below=36
+layout_marginTop=0dp
+background=#f8f8f8
+layout_marginLeft=20dp
+layout_marginRight=20dp</ppt>
+<event></event>
+</View>
+<View id="46" did="45" type="TextView">
+<ppt>width=-2
+height=-1
+text=目录/
+textColor=#b0656565
+textSize=14sp
+textColor=#ff397dff
+textStyle=bold
+gravity=center_vertical</ppt>
+<event><eventItme type="clicki">fn 刷新主页列表.刷新("")
+us(网盘.48,"text","")</eventItme></event>
+</View>
+<View id="47" did="45" type="HorizontalScrollView">
+<ppt>width=-1
+height=-2</ppt>
+<event></event>
+</View>
+<View id="48" did="47" type="TextView">
+<ppt>width=-2
+height=-1
+text=
+layout_marginLeft=10dp
+textColor=#b0656565
+textSize=14sp
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

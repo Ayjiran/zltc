@@ -1,0 +1,225 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=black</ppt>
+<event></event>
+</View>
+<View id="24" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="26" did="24" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="25" did="26" type="VideoView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="2" did="24" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=55dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="5" did="4" type="ImageView">
+<ppt>width=35dp
+height=35dp
+src=@k/icon_titlebar_back_normal.png</ppt>
+<event></event>
+</View>
+<View id="6" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="7" did="6" type="TextView">
+<ppt>width=-2
+height=-2
+text=二维码扫描
+textColor=#ffffffff
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="8" did="3" type="LinearLayout">
+<ppt>width=55dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="ImageView">
+<ppt>width=35dp
+height=35dp
+src=@k/icon_titlebar_light_disable_normal.png</ppt>
+<event><eventItme type="clicki">f(sss.闪光灯=="关")
+{
+  ufnsui()
+  {
+usx(sss.ps,"usg",true)
+}
+}
+else
+{
+  ufnsui()
+  {
+  usx(sss.ps,"usg",false)
+  sss 闪光灯="开"
+}
+}
+syso(sss.闪光灯)</eventItme></event>
+</View>
+<View id="10" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="LinearLayout">
+<ppt>width=200dp
+height=200dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="12" did="11" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="13" did="12" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@f/edit_image_crop_corner_lefttop.png</ppt>
+<event></event>
+</View>
+<View id="15" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center|right</ppt>
+<event></event>
+</View>
+<View id="16" did="15" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="17" did="16" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@f/edit_image_crop_corner_righttop.png</ppt>
+<event></event>
+</View>
+<View id="18" did="11" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+layout_marginTop=100dp</ppt>
+<event></event>
+</View>
+<View id="19" did="18" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="20" did="19" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@f/edit_image_crop_corner_leftbottom.png</ppt>
+<event></event>
+</View>
+<View id="21" did="18" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center|right</ppt>
+<event></event>
+</View>
+<View id="22" did="21" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="23" did="22" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@f/edit_image_crop_corner_rightbottom.png</ppt>
+<event></event>
+</View>
+<View id="27" did="2" type="LinearLayout">
+<ppt>width=-1
+height=150dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="28" did="27" type="CardView">
+<ppt>width=80dp
+height=80dp
+app_CardElevation=0
+app_CardcornerRadius=40dp
+app_CardBackgroundColor=#50000000</ppt>
+<event></event>
+</View>
+<View id="29" did="28" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="30" did="29" type="CardView">
+<ppt>width=50dp
+height=50dp
+app_CardcornerRadius=25dp
+app_CardElevation=0</ppt>
+<event></event>
+</View>
+<View id="31" did="30" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">usxh(sss.ps,25,90,1280,960,95)
+sss 闪光灯="关"</eventItme></UIEventset>

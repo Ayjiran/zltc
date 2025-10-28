@@ -1,0 +1,390 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#FAFAFAFA</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="88" did="3" type="Toolbar">
+<ppt>width=-1
+height=48dp
+background=white
+app_title=加载中…
+app_TitleColor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="41" did="2" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="12" did="41" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="97" did="12" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="96" did="97" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="13" did="96" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="LinearLayout">
+<ppt>width=-1
+height=60dp
+gravity=center
+orientation=vertical
+layout_marginTop=30dp</ppt>
+<event></event>
+</View>
+<View id="15" did="14" type="CardView">
+<ppt>width=40dp
+height=40dp
+app_CardcornerRadius=20dp
+app_CardElevation=0</ppt>
+<event></event>
+</View>
+<View id="16" did="15" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+background=#1E88E5</ppt>
+<event></event>
+</View>
+<View id="17" did="16" type="TextView">
+<ppt>width=-2
+height=-2
+text=1
+textColor=#ffffffff
+textStyle=bold
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="18" did="13" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=center
+layout_margin=10dp</ppt>
+<event></event>
+</View>
+<View id="19" did="18" type="TextView">
+<ppt>width=-2
+height=-2
+text=文件链接
+textColor=#000000
+textSize=16sp
+textIsSelectable=true
+layout_margin=10dp
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="25" did="13" type="LinearLayout">
+<ppt>width=-1
+height=150dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="26" did="25" type="LinearLayout">
+<ppt>width=150dp
+height=-2
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="27" did="26" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@b/umcsdk_loading.png</ppt>
+<event></event>
+</View>
+<View id="20" did="96" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="32" did="96" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+visibility=gon</ppt>
+<event></event>
+</View>
+<View id="33" did="32" type="LinearLayout">
+<ppt>width=-1
+height=70dp
+gravity=center
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="34" did="33" type="CardView">
+<ppt>width=40dp
+height=40dp
+app_CardcornerRadius=20dp
+app_CardElevation=0</ppt>
+<event></event>
+</View>
+<View id="35" did="34" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+background=#1E88E5</ppt>
+<event></event>
+</View>
+<View id="36" did="35" type="TextView">
+<ppt>width=-2
+height=-2
+text=2
+textColor=#ffffffff
+textStyle=bold
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="37" did="32" type="LinearLayout">
+<ppt>width=-1
+height=30dp
+orientation=horizontal
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="38" did="37" type="TextView">
+<ppt>width=-2
+height=-2
+text=访问密码：
+textColor=#000000
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="98" did="37" type="TextView">
+<ppt>width=-2
+height=-2
+text=(点我查看)
+textColor=#000000
+textSize=17sp
+textColor=#1E88E5</ppt>
+<event><eventItme type="clicki">ug(98,"text",文字)
+f(文字=="(点我查看)")
+{
+	fr("$账号.txt", username)
+	fr("$密码.txt", userpwd)
+	s url = username + "/" + sss.图片路径 + sss.文件名称
+	s post_data = "username=" + username + "&possword=" + userpwd + "&url=" + url
+	syso(post_data)
+	t()
+	{
+		s api_url = sss.api + "/api/duqu.php"
+		hs(api_url, post_data, "utf-8", result)
+		json(result, ha)
+		json(ha,"get","msg",obj)
+		json(ha,"get","code",密码)
+		ufnsui()
+		{
+			f(obj?"成功")
+			{
+				f(密码=="")
+				{
+					us(98,"text","暂未加密")
+				}
+                else
+                {
+                	us(98,"text",密码)
+                }
+			}
+			else
+			{
+				tw(obj)
+			}
+			endutw()
+		}
+	}
+}
+else
+{
+	us(98,"text","(点我查看)")
+}</eventItme></event>
+</View>
+<View id="28" did="41" type="LinearLayout">
+<ppt>width=-1
+height=-2
+gravity=center|bottom
+orientation=vertical
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="29" did="28" type="CardView">
+<ppt>width=-1
+height=40dp
+app_CardcornerRadius=25dp
+app_CardElevation=0
+layout_margin=20dp</ppt>
+<event></event>
+</View>
+<View id="30" did="29" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffe3f1ff
+gravity=center</ppt>
+<event><eventItme type="clicki">ug(19,"text",sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="31" did="30" type="TextView">
+<ppt>width=-2
+height=-2
+text=文 件 预 览
+textColor=#1E88E5
+textSize=15sp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">fn 全局.状态栏()
+fn 全局.api()
+fn 全局.储存路径()
+
+us(10,"visibility","invisible")
+us(88,"app_title",sss.文件名称)
+us(31,"text","查看文件")
+ss(sss.api+"/"+sss.图片,文件链接)
+us(19,"text",文件链接)
+uqr(文件链接,400,二维码图片)
+us(27,"src",二维码图片)
+
+s id=88
+utb(id)
+java(mTba, activity, "android.support.v7.app.AppCompatActivity.getSupportActionBar")
+java(null, mTba, "android.support.v7.app.ToolbarActionBar.setDisplayHomeAsUpEnabled", "boolean", true)
+//设置左边为返回键
+utb("left", id, "@coolbackhei.png")
+utb("set", "leftck", id)
+{
+	uzd(震动器, 30)
+	end()
+}
+fr("$颜色.txt",颜色)
+fn 着色.控件着色(id,颜色)</eventItme><eventItme type="menu">case 加密文件:
+utw(null,"","文件加密.iyu","",false,ss.文件加密)
+{
+}
+break
+
+case 直链分享:
+fr("$账号.txt", username)
+ug(19,"text",url)
+ss(url+"?verify_show=imgOnlyKey123",链接)
+sit(a, "action", "android.intent.action.SEND")
+sit(a, "type", "text/plain")
+//sit(a,"classname","com.tencent.mobileqq", "com.tencent.mobileqq.activity.JumpActivity")
+sit(a, "extra", "android.intent.extra.TEXT",链接)
+uit(a, "chooser", "请分享到200人以上的群")
+break
+
+case 设置头像:
+// 读取账号密码
+fr("$账号.txt", username)
+fr("$密码.txt", password)
+// 要修改的头像内容（例如头像URL或Base64字符串）
+ug(19,"text",new_avatar)
+// 构建POST参数
+ss("username=" + username + "&password=" + password + "&tx=" + new_avatar, post_data)
+// 对中文和特殊字符编码
+stobm(post_data, "utf-8", encoded_data)
+// 发送请求
+t()
+{
+	s api_url = sss.api+"/api/touxaing.php"
+	hs(api_url, encoded_data, "utf-8", result, err)
+	json(err,sj)
+	json(sj,"get","msg",err)
+	ufnsui()
+	{
+		f(err?"成功")
+		{
+			json(result, obj)
+			json(obj, "msg", msg)
+			tw(err)
+			sss 修改头像="是"
+		}
+		else
+		{
+			tw(err)
+		}
+	}
+}
+break
+
+case 删除文件:
+// 读取账号密码
+tws(v, "确定删除文件?", 0, "是的")
+{
+	fr("$账号.txt", username)
+	fr("$密码.txt", password)
+	
+	// 配置参数（根据实际场景动态获取）
+	s apiUrl = sss.api + "/api/shanchu.php"
+	s targetName = sss.文件名称 // 要删除的文件/目录名（如"142.jpg"或"142"）
+	s folderPath = sss.图片路径 // 多级父路径（如"12/12/142"，空则为用户根目录）
+	s deleteType = "file" // 删除类型：file（文件）/dir（目录）
+	
+	// 编码中文参数（避免乱码）
+	stobm(targetName, "utf-8", encodedTarget)
+	stobm(folderPath, "utf-8", encodedFolder)
+	// 构建表单参数
+	s formData = "username=" + username + "&password=" + password + "&target_name=" + encodedTarget + "&folder_path=" + encodedFolder + "&delete_type=" + deleteType
+	
+	// 发送POST请求
+	t()
+	{
+		huf(apiUrl, formData, "", "utf-8", "", result)
+		syso("删除结果：" + result)
+		json(result, jo)
+		json(jo, "get", "msg", tip)
+		ufnsui()
+		{
+			f(tip?"成功")
+			{
+				sss 删除成功="是"
+				end()
+			}
+			else
+			{
+				tw(tip)
+			}
+		}
+	}
+}
+break</eventItme></UIEventset>

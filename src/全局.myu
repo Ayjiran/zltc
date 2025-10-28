@@ -1,0 +1,114 @@
+fn 状态栏()
+uycl("#ffffffff",true)
+java(cs, activity, "android.app.Activity.getWindow")
+java(cs2, cs, "android.view.Window.getDecorView")
+java(null, cs2, "android.view.View.setSystemUiVisibility", "int", "8192")
+ngde("3","40","#ffffffff|#ffffffff","#ff2e2e2e","leftright",bian1)
+end fn
+//设置树洞网站(全局性)
+fn api()
+sss api="https://zl.ayjrw.cn"
+end fn
+//设置网盘缓存或者储存路径
+fn 储存路径()
+sss 储存路径="%智链图床"
+end fn
+
+fn 数据统计()
+dhr(dh, 0, 720, 1, 0.5, 1, 0.5)
+dh(dh, "duration", 1000)
+us(21, "dh", dh)
+fr("$账号.txt",username)
+ss("username="+username,post_data)
+t()
+{
+	s api_url = sss.api+"/api/tongji.php"
+	hs(api_url, post_data, "utf-8", result)
+	syso(post_data)
+	json(result, obj)
+	json(obj,"get","msg",ij)
+	json(obj,"get","file_count",文件)
+	json(obj,"get","dir_count",文件夹)
+	json(obj,"get","total_look",看看)
+	ufnsui()
+	{
+		f(ij?"成功")
+		{
+			ss 加载统计="是"
+			us(广场.19,"text",文件)
+			us(广场.25,"text",文件夹)
+			us(广场.14,"text",看看)
+			fr("$账号.txt",username)
+			ss(sss.api+"/api/zhexian.php?author="+username,统计)
+			us(广场.2,"url",统计)
+		}
+		else
+		{
+			tw(ij)
+		}
+	}
+}
+end fn
+
+fn 账号加载()
+fr("$账号.txt", username)
+us(我的.9,"text",username)
+fr("$密码.txt", password)
+ss("username=" + username + "&password=" + password, post_data)
+// 对中文和特殊字符编码
+stobm(post_data, "utf-8", encoded_data)
+// 发送请求
+t()
+{
+	s api_url = sss.api+"/api/user.php"
+	hs(api_url, encoded_data, "utf-8", result, err)
+	json(err,内容)
+	json(内容, "get","data", msg)
+	syso(msg)
+	ufnsui()
+	{
+		f(内容?"成功")
+		{
+			json(msg, "get","账号", 账号)
+			json(msg, "get","密码", 密码)
+			json(msg, "get","会员到期", 会员)
+			json(msg, "get","头像", 头像)
+			json(msg, "get","余额", 余额)
+			sr(会员,"-","",会员时间)
+			time(2, 时间)
+			sr(时间,"-","",当前时间)
+			f(会员时间&gt;当前时间)
+			{
+				sss 会员状态="是"
+				us(我的.19,"text",会员)
+				us(我的.11,"text","会员用户")
+				us(我的.11,"textcolor","#ffff0000")
+			}
+			else
+			{
+				sss 会员状态=""
+				us(我的.19,"text","暂无会员")
+				us(我的.11,"text","普通用户")
+				us(我的.11,"textcolor","#a74a4a4a")
+			}
+			f(头像=="")
+			{
+				
+			}
+			else
+			{
+				ss(头像+"?verify_show=imgOnlyKey123",头像)
+				us(我的.65,"src",头像)
+				us(我的.66,"text",头像)
+				sss 头像=头像
+			}
+			ss("余额:"+余额,余额)
+			us(我的.24,"text",余额)
+		}
+		else
+		{
+			tw(内容)
+		}
+	}
+}
+end fn

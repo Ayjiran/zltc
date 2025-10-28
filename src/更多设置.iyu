@@ -1,0 +1,509 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#FAFAFAFA</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="5" did="3" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="6" did="5" type="LinearLayout">
+<ppt>width=65dp
+height=-1
+gravity=center
+orientation=vertical</ppt>
+<event><eventItme type="clicki">end()</eventItme></event>
+</View>
+<View id="7" did="6" type="TextView">
+<ppt>width=-2
+height=-2
+text=返回
+textColor=#1E88E5
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="8" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=更多设置
+textColor=#000000
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="10" did="5" type="LinearLayout">
+<ppt>width=65dp
+height=-1
+gravity=center
+orientation=vertical
+visibility=invisible</ppt>
+<event><eventItme type="clicki">end()</eventItme></event>
+</View>
+<View id="11" did="10" type="TextView">
+<ppt>width=-2
+height=-2
+text=返回
+textColor=#1E88E5
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="12" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="13" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="LinearLayout">
+<ppt>width=-1
+height=30dp
+gravity=center|left
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="15" did="14" type="TextView">
+<ppt>width=-2
+height=-2
+text=设备
+textColor=#1E88E5
+textSize=14sp
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="16" did="13" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+background=#ffffffff
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="17" did="16" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="18" did="17" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@g/icon_code_lock_setting.png</ppt>
+<event></event>
+</View>
+<View id="19" did="16" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center|left
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="20" did="19" type="TextView">
+<ppt>width=-2
+height=-2
+text=设备密码
+textColor=#FF313B4B
+textSize=16sp</ppt>
+<event></event>
+</View>
+<View id="21" did="16" type="LinearLayout">
+<ppt>width=70dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="22" did="21" type="ImageView">
+<ppt>width=50dp
+height=30dp
+src=@g/auto_sync_off.png</ppt>
+<event></event>
+</View>
+<View id="23" did="13" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+background=#ffffffff
+layout_marginTop=1.2dp</ppt>
+<event></event>
+</View>
+<View id="24" did="23" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="25" did="24" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@g/icon_folders_setting.png</ppt>
+<event></event>
+</View>
+<View id="26" did="23" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center|left
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="27" did="26" type="TextView">
+<ppt>width=-2
+height=-2
+text=选择文件方式(自带)
+textColor=#FF313B4B
+textSize=16sp</ppt>
+<event></event>
+</View>
+<View id="28" did="23" type="LinearLayout">
+<ppt>width=70dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="29" did="28" type="ImageView">
+<ppt>width=50dp
+height=30dp
+src=@g/auto_sync_on.png</ppt>
+<event><eventItme type="clicki">fr("$更多设置/选择器类型.xml",选择器类型)
+f(选择器类型=="自带")
+{
+fw("$更多设置/选择器类型.xml","系统")
+us(29,"src","@g/auto_sync_off.png")
+}
+else
+{
+  fw("$更多设置/选择器类型.xml","自带")
+us(29,"src","@g/auto_sync_on.png")
+}</eventItme></event>
+</View>
+<View id="30" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+layout_marginTop=5dp</ppt>
+<event></event>
+</View>
+<View id="31" did="30" type="LinearLayout">
+<ppt>width=-1
+height=30dp
+gravity=center|left
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="32" did="31" type="TextView">
+<ppt>width=-2
+height=-2
+text=内存
+textColor=#1E88E5
+textSize=14sp
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="33" did="30" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="34" did="33" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="35" did="34" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@g/icon_clear_cache_setting.png</ppt>
+<event></event>
+</View>
+<View id="36" did="33" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center|left
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="37" did="36" type="TextView">
+<ppt>width=-2
+height=-2
+text=删除所有下载
+textColor=#FF313B4B
+textSize=16sp</ppt>
+<event></event>
+</View>
+<View id="38" did="33" type="LinearLayout">
+<ppt>width=70dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event><eventItme type="clicki">ss(sss.储存路径+"/我的网盘/",文件夹)
+syso(文件夹)
+fn 删除.delc(文件夹)
+tw("清理成功")</eventItme></event>
+</View>
+<View id="48" did="38" type="TextView">
+<ppt>width=-2
+height=-2
+text=删除
+textColor=#1E88E5
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="40" did="30" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+background=#ffffffff
+layout_marginTop=1.2dp</ppt>
+<event></event>
+</View>
+<View id="41" did="40" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="42" did="41" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@g/icon_default_path_setting.png</ppt>
+<event></event>
+</View>
+<View id="43" did="40" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center|left
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="44" did="43" type="TextView">
+<ppt>width=-2
+height=-2
+text=下载允许重复
+textColor=#FF313B4B
+textSize=16sp</ppt>
+<event></event>
+</View>
+<View id="45" did="40" type="LinearLayout">
+<ppt>width=70dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="46" did="45" type="ImageView">
+<ppt>width=50dp
+height=30dp
+src=@g/auto_sync_off.png</ppt>
+<event><eventItme type="clicki">fr("$更多设置/允许重复下载.xml",允许重复结果)
+f(允许重复结果=="拒绝")
+{
+  fw("$更多设置/允许重复下载.xml","允许")
+  us(46,"src","@g/auto_sync_on.png")
+}
+else
+{
+fw("$更多设置/允许重复下载.xml","拒绝")
+us(46,"src","@g/auto_sync_off.png")
+}</eventItme></event>
+</View>
+<View id="49" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+layout_marginTop=5dp</ppt>
+<event></event>
+</View>
+<View id="50" did="49" type="LinearLayout">
+<ppt>width=-1
+height=30dp
+gravity=center|left
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="51" did="50" type="TextView">
+<ppt>width=-2
+height=-2
+text=其他
+textColor=#1E88E5
+textSize=14sp
+layout_marginLeft=15dp</ppt>
+<event></event>
+</View>
+<View id="52" did="49" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+background=#ffffffff
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="53" did="52" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="54" did="53" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@g/icon_code_lock_setting.png</ppt>
+<event></event>
+</View>
+<View id="55" did="52" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center|left
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="56" did="55" type="TextView">
+<ppt>width=-2
+height=-2
+text=设备密码
+textColor=#FF313B4B
+textSize=16sp</ppt>
+<event></event>
+</View>
+<View id="57" did="52" type="LinearLayout">
+<ppt>width=70dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="58" did="57" type="ImageView">
+<ppt>width=50dp
+height=30dp
+src=@g/auto_sync_off.png</ppt>
+<event></event>
+</View>
+<View id="59" did="49" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+background=#ffffffff
+layout_marginTop=1.2dp</ppt>
+<event><eventItme type="clicki">javanew(c,"android.os.Process")
+java(id,c,"android.os.Process.myPid")
+java(a,c,"android.os.Process.killProcess","int",id)
+</eventItme></event>
+</View>
+<View id="60" did="59" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="61" did="60" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@g/icon_clear_cache_setting.png</ppt>
+<event></event>
+</View>
+<View id="62" did="59" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center|left
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="63" did="62" type="TextView">
+<ppt>width=-2
+height=-2
+text=退出程序
+textColor=#FF313B4B
+textSize=16sp</ppt>
+<event></event>
+</View>
+<View id="64" did="59" type="LinearLayout">
+<ppt>width=70dp
+height=-1
+orientation=vertical
+gravity=center
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="65" did="64" type="ImageView">
+<ppt>width=50dp
+height=30dp
+src=@g/auto_sync_on.png</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">fn 全局.状态栏()
+fn 全局.api()
+fn 全局.储存路径()
+//允许文件下载
+fr("$更多设置/允许重复下载.xml",允许重复结果)
+f(允许重复结果=="拒绝")
+{
+
+  us(46,"src","@g/auto_sync_off.png")
+}
+else
+{
+us(46,"src","@g/auto_sync_on.png")
+}
+//自带选择器开关提示
+fr("$更多设置/选择器类型.xml",选择器类型)
+f(选择器类型=="自带")
+{
+
+  us(29,"src","@g/auto_sync_on.png")
+}
+else
+{
+us(29,"src","@g/auto_sync_off.png")
+}</eventItme></UIEventset>

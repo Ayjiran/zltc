@@ -1,0 +1,108 @@
+fn delc(mu)
+//给定一个目录
+ss gml=mu
+//初始化文件夹集合，文件夹与文件夹之间用分号隔开，路径越深排列越后，
+ss sum
+fl(ss.gml,lb)
+t()
+{
+  f(lb==null||mu=="")
+  {
+    syso("无此文件夹")
+    endcode
+    }
+  for(cn;lb)
+  {
+    ss(ss.gml+"/"+cn,sh)
+    fi(sh,pd)
+    //判断是否文件夹,否则就是文件
+    f(pd==true)
+    {
+      //添加文件元素进根目录队列
+      ss(ss.gdl+ss.gml+"/"+cn+"\n",ss.gdl)
+      //添加到文件夹集合里
+      ss(ss.sum+sh+";",ss.sum)
+      }
+    else
+    {
+      syso("正在删除:"+sh)
+      fd(sh,del)
+    }
+    }
+  f(ss.gdl!=null)
+  {
+    //如果有子文件夹则继续遍历
+    fn file.mu()
+    }
+  
+  
+  
+//数组倒过来，
+s a = ss.sum
+s b = ";"
+sl(a, b, c)
+s xys=""
+
+for(d; c)
+{
+  ss(d+b+xys,xys)
+}
+slg(xys,yscd)
+slg(b,jicd)
+s(yscd-jicd,sg)
+ssg(xys,0,sg,xys)
+
+sl(xys,";",sz)
+for(v;sz)
+{
+  //循环删除子文件夹
+  fd(v,del)
+  syso("正在删除:"+v)
+}
+//删除给定的该文件夹
+fd(ss.gml,del)
+syso("正在删除:"+ss.gml)
+syso("删除完毕!")
+  }
+end fn
+
+fn mu()
+ss bef=ss.gdl
+sl(ss.gdl,"\n",sz)
+ss gdl
+for(gml;sz)
+{
+  f(gml!="")
+    {
+      fl(gml,lb)
+      for(cn;lb)
+      {
+        ss(gml+"/"+cn,sh)
+        fi(sh,pd)
+         //判断是否文件夹，否则就是文件
+        f(pd==true)
+        {
+          //添加文件元素进根目录队列
+          ss(ss.gdl+gml+"/"+cn+"\n",ss.gdl)
+            //添加到文件夹集合里
+      ss(ss.sum+sh+";",ss.sum)
+          }
+        else
+        {
+          //删除文件
+          fd(sh,del)
+          syso("正在删除:"+sh)
+        }
+        
+        
+        
+        }
+      }
+    }
+
+//如果还有文件夹则继续遍历
+f(ss.gdl!=null)
+{
+  fn file.mu()
+}
+end fn

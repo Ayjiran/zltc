@@ -1,0 +1,96 @@
+fn 刷新(路径)
+f(路径==null)
+{
+	s 路径=""
+}
+else
+{
+}
+us(网盘.15,"refreshing","true")
+fr("$账号.txt", username)
+fr("$密码.txt", password)
+ss(sss.api+"/list.php",api)
+//s 提交 = "{\"username\":\"" + username + "\", \"password\":\"" + password + "\"}"
+s 提交 = "username=" + username + "&password=" + password+ "&folder_path=" + 路径
+t()
+{
+	hs(api, 提交, "utf-8", dui)
+	json(dui, jo)
+	json(jo, "get", "data", data_obj)
+	json(data_obj, "list", "items", file_list)
+	json(file_list, "size", size)
+	ufnsui()
+	{
+		f(jo?"错误")
+		{
+			us(网盘.15,"refreshing","false")
+			tws(v, "请重新登录！", 0, "好的")
+			{
+				end()
+			}
+		}
+		else
+		{
+			f(size==0||jo?"目录不存在")
+			{
+				ufnsui()
+				{
+					f(路径==""||路径==null)
+					{
+						
+					}
+					else
+					{
+						us(网盘.48,"text",路径)
+					}
+					syso("无数据")
+					us(网盘.15,"refreshing","false")
+					us(网盘.50,"visibility","visible")
+					us(网盘.4,"visibility","gone")
+				}
+			}
+			else
+			{
+				s li
+				w(size &gt; 0)
+				{
+					s index = 0
+					w(index &lt; size)
+					{
+						json(file_list, "data", index, file_item)
+						json(file_item, "get", "name", name)
+						json(file_item, "get", "modify_time", time)
+						json(file_item, "get", "relative_path", img)
+						ss(sss.api+"/"+img,src)
+						f(name?".")
+						{
+							ula(li, 5 = name,6=time,14=src,8=img,3="@g/copy_icon_pic.png",16="@you.png")
+						}
+						else
+						{
+							ula(li, 5 = name,6=time,3="@file/file.png",16="@sc.png")
+						}
+						s+(1, index)
+					}
+					ufnsui()
+					{
+						f(路径==""||路径==null)
+						{
+							
+						}
+						else
+						{
+							us(网盘.48,"text",路径)
+						}
+						uls(网盘.4, li, "文件列表.iyu", -1, -2)
+						us(网盘.15,"refreshing","false")
+						us(网盘.50,"visibility","gone")
+						us(网盘.4,"visibility","visible")
+					}
+					break
+				}
+			}
+		}
+	}
+}
+end fn

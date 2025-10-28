@@ -1,0 +1,94 @@
+
+fn 构建(图标,标题,内容,关闭)
+syso(内容)
+javanew(弹窗对象,"android.app.AlertDialog$Builder", "android.content.Context", activity)
+f(图标!=null)
+{
+sbp(图标,图标)
+java(null,弹窗对象,"android.app.AlertDialog$Builder.setIcon","android.graphics.drawable.Drawable",图标)
+}
+f(标题!=null)
+{
+java(null,弹窗对象,"android.app.AlertDialog$Builder.setTitle","CharSequence",标题)
+}
+f(内容*?".iyu"||内容*?"ijs"||内容*?"ijava")
+{
+javanew(布局参数,"android.widget.LinearLayout$LayoutParams","int",-1,"int",-1)
+javanew(线性布局,"android.widget.LinearLayout","Context",activity)
+java(null,线性布局,"android.view.View.setLayoutParams","android.view.ViewGroup$LayoutParams",布局参数)
+java(null,线性布局,"android.widget.LinearLayout.setOrientation","int",1)
+addv(线性布局,内容)
+java(null,弹窗对象,"android.app.AlertDialog$Builder.setView","android.view.View",线性布局)
+sss 弹窗布局=线性布局
+}
+f(内容?"android.widget")
+{
+javanew(布局参数,"android.widget.LinearLayout$LayoutParams","int",-1,"int",-1)
+javanew(线性布局,"android.widget.LinearLayout","Context",activity)
+java(null,线性布局,"android.view.View.setLayoutParams","android.view.ViewGroup$LayoutParams",布局参数)
+java(null,线性布局,"android.widget.LinearLayout.setOrientation","int",1)
+nvw(内容,线性布局)
+java(null,弹窗对象,"android.app.AlertDialog$Builder.setView","android.view.View",线性布局)
+sss 弹窗布局=线性布局
+}
+else
+{
+java(null, 弹窗对象,"android.app.AlertDialog$Builder.setMessage","CharSequence",内容)
+}
+f(关闭)
+{
+java(null, 弹窗对象,"android.app.AlertDialog$Builder.setCancelable", "boolean", false)
+}
+sss 弹窗对象=弹窗对象
+end fn
+fn 设置按钮(弹窗对象,按钮,文字,事件)
+cls("android.content.DialogInterface$OnClickListener", 事件类)
+f(按钮=="按钮1")
+{
+javax(null, 弹窗对象, "android.app.AlertDialog$Builder", "setPositiveButton", "CharSequence",文字, 事件类, 事件)
+}
+else f(按钮=="按钮2")
+{
+javax(null, 弹窗对象, "android.app.AlertDialog$Builder", "setNegativeButton", "CharSequence",文字, 事件类, 事件)
+}
+else f(按钮=="按钮3")
+{
+javax(null, 弹窗对象, "android.app.AlertDialog$Builder", "setNeutralButton", "CharSequence",文字, 事件类, 事件)
+}
+end fn
+fn 显示(弹窗对象)
+java(弹窗对象,弹窗对象,"android.app.AlertDialog$Builder.create")
+java(null,弹窗对象,"android.app.Dialog.show")
+sss 弹窗对象=弹窗对象
+end fn
+fn 关闭(弹窗对象)
+java(null,弹窗对象,"android.app.Dialog.dismiss")
+end fn
+fn 取标题(弹窗对象)
+javags(对话框,弹窗对象,"android.app.AlertDialog","mAlert")
+javags(sss.标题,对话框,"com.android.internal.app.AlertController","mTitleView")
+end fn
+fn 取消息(弹窗对象)
+javags(对话框,弹窗对象,"android.app.AlertDialog","mAlert")
+javags(sss.消息,对话框,"com.android.internal.app.AlertController","mMessageView")
+end fn
+fn 取按钮(弹窗对象,标识)
+javags(标识,null,"android.content.DialogInterface",标识)
+javax(sss.按钮, 弹窗对象,"android.app.AlertDialog","getButton", "int", 标识)
+end fn
+fn 设置位置(弹窗对象,位置)
+java(window,弹窗对象,"android.app.Dialog.getWindow")
+javags(位置,null,"android.view.Gravity",位置)
+java(null,window,"android.view.Window.setGravity","int",位置)
+end fn
+fn 设置样式(弹窗对象,宽度,高度,x,y)
+java(window,弹窗对象,"android.app.Dialog.getWindow")
+cls("android.view.WindowManager$LayoutParams",cls_lp)
+java(lp,window,"android.view.Window.getAttributes")
+javass(null,lp,"android.view.ViewGroup$LayoutParams","width",宽度)
+javass(null,lp,"android.view.ViewGroup$LayoutParams","height",高度)
+javass(null,lp,"android.view.WindowManager$LayoutParams","y",y)
+javass(null,lp,"android.view.WindowManager$LayoutParams","x",x)
+java(null,window,"android.view.Window.setAttributes",cls_lp,lp)
+end fn
+

@@ -1,0 +1,238 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=3dp
+background=#1E88E5
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="LinearLayout">
+<ppt>width=-1
+height=45dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=文件加密
+textColor=#000000
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="6" did="5" type="LinearLayout">
+<ppt>width=-1
+height=0.5dp
+background=#10000000
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="7" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="17" did="7" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=vertical
+layout_marginLeft=20dp
+layout_marginRight=20dp
+layout_marginTop=15dp
+layout_marginBottom=15dp</ppt>
+<event></event>
+</View>
+<View id="18" did="17" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="19" did="18" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+hint=请输入文件密码！
+textColor=#000000
+textSize=17sp
+textColorHint=#000000
+singleLine=true
+maxLength=50
+background=#ffffffff
+</ppt>
+<event></event>
+</View>
+<View id="20" did="17" type="LinearLayout">
+<ppt>width=-1
+height=1dp
+background=#1E88E5
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="21" did="7" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=vertical
+layout_marginLeft=20dp
+layout_marginRight=20dp
+layout_marginTop=15dp
+layout_marginBottom=15dp
+gravity=center
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="22" did="21" type="TextView">
+<ppt>width=-2
+height=-2
+text=结果
+textColor=#000000
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="9" did="5" type="LinearLayout">
+<ppt>width=-1
+height=0.3dp
+background=#10000000
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="10" did="1" type="LinearLayout">
+<ppt>width=-1
+height=45dp
+orientation=horizontal
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center</ppt>
+<event><eventItme type="clicki">fr("$账号.txt",username)
+fr("$密码.txt",password)
+s url=username+"/"+sss.图片路径+sss.文件名称
+s post_data = "username=" + username + "&possword=" + password + "&url=" + url
+t()
+{
+	s api_url = sss.api+"/api/shanchukm.php"
+	hs(api_url, post_data, "utf-8", result)
+    syso(post_data)
+	json(result, obj)
+	json(obj,"get","msg",obj)
+	ufnsui()
+	{
+		f(obj?"成功")
+		{
+			us(98,"text","暂未加密")
+			endutw()
+		}
+		else
+		{
+			tw(obj)
+			endutw()
+		}
+	}
+}</eventItme></event>
+</View>
+<View id="12" did="11" type="TextView">
+<ppt>width=-2
+height=-2
+text=取消加密
+textColor=#ffff5669
+textSize=16.5sp</ppt>
+<event></event>
+</View>
+<View id="13" did="10" type="LinearLayout">
+<ppt>width=1dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="TextView">
+<ppt>width=0.6dp
+height=-1
+text=
+background=#10000000</ppt>
+<event></event>
+</View>
+<View id="15" did="10" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center</ppt>
+<event><eventItme type="clicki">f(sss.会员状态=="是")
+{
+	gvs(ss.文件加密,19,ss.文字)
+	ug(ss.文字,"text",加密文件名称)
+	sr(加密文件名称," ","",加密文件名称)
+	f(加密文件名称=="")
+	{
+		tw("请输入密码")
+	}
+	else
+	{
+		fr("$账号.txt",username)
+		fr("$密码.txt",password)
+		s url=username+"/"+sss.图片路径+sss.文件名称
+		s code=加密文件名称
+		s post_data = "username=" + username + "&userpwd=" + password + "&url=" + url + "&code=" + code + "&zuozhe=" + username
+		t()
+		{
+			s api_url = sss.api+"/api/km.php"
+			hs(api_url, post_data, "utf-8", result)
+			syso(result)
+			json(result, obj)
+			json(obj,"get","msg",obj)
+			ufnsui()
+			{
+				f(obj?"成功")
+				{
+					us(98,"text",加密文件名称)
+					endutw()
+				}
+				else
+				{
+					tw(obj)
+					endutw()
+				}
+			}
+		}
+	}
+}
+else
+{
+	tws(v, "非会员不支持文件加密！", 0, "开通")
+	{
+		uigo("兑换.iyu")
+	}
+}</eventItme></event>
+</View>
+<View id="16" did="15" type="TextView">
+<ppt>width=-2
+height=-2
+text=加密文件
+textColor=#1E88E5
+textSize=16.5sp</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

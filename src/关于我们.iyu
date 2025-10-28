@@ -1,0 +1,334 @@
+<View id="90" did="0" type="Toolbar">
+<ppt>width=-1
+height=48dp
+background=white
+app_title=关于我们
+app_TitleColor=#1E88E5
+visibility=gon</ppt>
+<event></event>
+</View>
+<View id="58" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+background=white</ppt>
+<event></event>
+</View>
+<View id="59" did="58" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="73" did="58" type="ScrollView">
+<ppt>width=-1
+height=-1
+background=white
+</ppt>
+<event></event>
+</View>
+<View id="3" did="73" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+background=white</ppt>
+<event></event>
+</View>
+<View id="13" did="3" type="RelativeLayout">
+<ppt>width=-1
+height=250dp
+background=@ic_blue_bg_big.png
+minHeight=220dp
+ut_below=56</ppt>
+<event></event>
+</View>
+<View id="10" did="13" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="104" did="10" type="CardView">
+<ppt>width=60dp
+height=60dp
+app_CardcornerRadius=10dp</ppt>
+<event></event>
+</View>
+<View id="56" did="104" type="ImageView">
+<ppt>width=-1
+height=-1
+src=@icon.png</ppt>
+<event></event>
+</View>
+<View id="15" did="10" type="TextView">
+<ppt>width=-2
+height=-2
+text=智链图床
+textColor=#101010
+layout_marginTop=10dp
+textSize=16dp
+textStyle=bold</ppt>
+<event></event>
+</View>
+<View id="103" did="10" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+textColor=#98000000
+layout_marginTop=3dp
+textSize=10sp
+textStyle=bold
+visibility=gon</ppt>
+<event></event>
+</View>
+<View id="72" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+ut_below=13
+layout_marginTop=10dp
+layout_marginLeft=20dp
+layout_marginRight=20dp</ppt>
+<event></event>
+</View>
+<View id="5" did="72" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="16" did="5" type="LinearLayout">
+<ppt>width=-1
+height=60dp
+orientation=horizontal
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="17" did="16" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=2
+gravity=center_vertical|left</ppt>
+<event></event>
+</View>
+<View id="19" did="17" type="TextView">
+<ppt>width=-2
+height=-2
+text=当前版本：
+textColor=#000000</ppt>
+<event></event>
+</View>
+<View id="18" did="16" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=2
+gravity=center_vertical|right</ppt>
+<event></event>
+</View>
+<View id="21" did="18" type="TextView">
+<ppt>width=-2
+height=-2
+text=1.0
+textColor=#d4000000
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="28" did="5" type="TextView">
+<ppt>width=-1
+height=1dp
+text=文本28
+backgroundColor=#ffededed</ppt>
+<event></event>
+</View>
+<View id="31" did="5" type="LinearLayout">
+<ppt>width=-1
+height=60dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="32" did="31" type="LinearLayout">
+<ppt>width=-2
+height=-1
+orientation=vertical
+gravity=center_vertical|left</ppt>
+<event></event>
+</View>
+<View id="34" did="32" type="TextView">
+<ppt>width=-2
+height=-2
+text=软件作者：
+textColor=#000000</ppt>
+<event></event>
+</View>
+<View id="33" did="31" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center_vertical|right</ppt>
+<event></event>
+</View>
+<View id="35" did="33" type="TextView">
+<ppt>width=-2
+height=-2
+text=长春幻隐网络科技有限公司
+textColor=#d4000000
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="105" did="5" type="TextView">
+<ppt>width=-1
+height=1dp
+text=文本36
+BackgroundColor=#ffededed</ppt>
+<event></event>
+</View>
+<View id="106" did="5" type="LinearLayout">
+<ppt>width=-1
+height=60dp
+orientation=horizontal
+layout_marginBottom=100dp</ppt>
+<event><eventItme type="clicki">hws(sss.api)</eventItme></event>
+</View>
+<View id="107" did="106" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=2
+gravity=center_vertical|left</ppt>
+<event></event>
+</View>
+<View id="108" did="107" type="TextView">
+<ppt>width=-2
+height=-2
+text=官方网站
+textColor=#000000</ppt>
+<event></event>
+</View>
+<View id="109" did="106" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=2
+gravity=center_vertical|right</ppt>
+<event></event>
+</View>
+<View id="110" did="109" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@you.png</ppt>
+<event></event>
+</View>
+<View id="100" did="58" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="92" did="100" type="LinearLayout">
+<ppt>width=-1
+height=-2
+gravity=center
+orientation=horizontal
+</ppt>
+<event></event>
+</View>
+<View id="93" did="92" type="TextView">
+<ppt>width=-2
+height=-2
+text=使用即代表已看过并
+textsize=13sp
+textcolor=#000000</ppt>
+<event></event>
+</View>
+<View id="94" did="92" type="TextView">
+<ppt>width=-2
+height=-2
+text=同意
+textsize=13sp
+textcolor=#000000
+textcolor=#1E88E5</ppt>
+<event></event>
+</View>
+<View id="95" did="92" type="TextView">
+<ppt>width=-2
+height=-2
+text=软件使用
+textsize=13sp
+textcolor=#000000</ppt>
+<event></event>
+</View>
+<View id="96" did="100" type="LinearLayout">
+<ppt>width=-1
+height=-2
+gravity=center
+orientation=horizontal
+layout_margin=5dp</ppt>
+<event></event>
+</View>
+<View id="97" did="96" type="TextView">
+<ppt>width=-2
+height=-2
+text=《用户协议》
+textsize=13sp
+textcolor=#1E88E5
+</ppt>
+<event><eventItme type="clicki">ss(sss.api+"/zc/xy.html",sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="98" did="96" type="TextView">
+<ppt>width=-2
+height=-2
+text=《隐私政策》
+textsize=13sp
+textcolor=#1E88E5</ppt>
+<event><eventItme type="clicki">ss(sss.api+"/zc/zc.html",sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="101" did="100" type="LinearLayout">
+<ppt>width=-1
+height=-2
+gravity=center
+orientation=horizontal
+layout_marginBottom=10dp</ppt>
+<event></event>
+</View>
+<View id="102" did="101" type="TextView">
+<ppt>width=-2
+height=-2
+text=Copyright © 2025 智链图床 Powered by 隐心
+textsize=9sp
+textcolor=#9e000000
+visibility=gon</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loadingComplete">loadjar("armeabi-v7a/classes2.dex",class)
+cls(class,"com.Mus.ReboundScrollView",mB)
+gvs(58,a)
+gvs(73,b)
+javanew(mBs,mB,"Context",activity)
+urvw(73)
+nvw(mBs,58)
+nvw(b,mBs)</eventItme><eventItme type="loading">fn 全局.状态栏()
+fn 全局.api()
+fn 全局.储存路径()
+fn Lottie.loaddex()
+s id=90
+utb(id)
+java(mTba, activity, "android.support.v7.app.AppCompatActivity.getSupportActionBar")
+java(null, mTba, "android.support.v7.app.ToolbarActionBar.setDisplayHomeAsUpEnabled", "boolean", true)
+//设置左边为返回键
+utb("left", id, "@coolbackhei.png")
+utb("set", "leftck", id)
+{
+  uzd(震动器, 30)
+  end()
+}
+fr("$颜色.txt",颜色)
+fn 着色.控件着色(id,颜色)
+
+/.sj(sss.内容,"备案(",")备案",ii)
+us(103,"text",ii)</eventItme></UIEventset>

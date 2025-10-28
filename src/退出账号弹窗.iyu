@@ -1,0 +1,122 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=3dp
+background=#1E88E5
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="LinearLayout">
+<ppt>width=-1
+height=45dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=提示
+textColor=#000000
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="6" did="5" type="LinearLayout">
+<ppt>width=-1
+height=0.5dp
+background=#10000000
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="7" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="8" did="7" type="TextView">
+<ppt>width=-2
+height=-2
+text=退出账号你需要重新登陆
+layout_margin=20dp
+textColor=#000000
+textSize=16sp</ppt>
+<event></event>
+</View>
+<View id="9" did="5" type="LinearLayout">
+<ppt>width=-1
+height=0.3dp
+background=#10000000
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="10" did="1" type="LinearLayout">
+<ppt>width=-1
+height=45dp
+orientation=horizontal
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center</ppt>
+<event><eventItme type="clicki">endutw()</eventItme></event>
+</View>
+<View id="12" did="11" type="TextView">
+<ppt>width=-2
+height=-2
+text=关闭
+textColor=#1E88E5
+textSize=16.5sp</ppt>
+<event></event>
+</View>
+<View id="13" did="10" type="LinearLayout">
+<ppt>width=1dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="TextView">
+<ppt>width=0.6dp
+height=-1
+text=
+background=#10000000</ppt>
+<event></event>
+</View>
+<View id="15" did="10" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center</ppt>
+<event><eventItme type="clicki">fd("$账号.txt",k)
+fd("$密码.txt",k)
+uigo("登录.iyu")
+end()</eventItme></event>
+</View>
+<View id="16" did="15" type="TextView">
+<ppt>width=-2
+height=-2
+text=退出
+textColor=#ffff7082
+textSize=16.5sp</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

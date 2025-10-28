@@ -1,0 +1,502 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#FAFAFAFA</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffffffff
+elevation=3dp</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="5" did="3" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="19" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center|left</ppt>
+<event></event>
+</View>
+<View id="18" did="19" type="TextView">
+<ppt>width=-2
+height=-2
+text=我的图床
+textColor=#1E88E5
+textSize=16sp
+textStyle=bold
+layout_marginLeft=20dp</ppt>
+<event></event>
+</View>
+<View id="22" did="5" type="LinearLayout">
+<ppt>width=55dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="23" did="22" type="ImageView">
+<ppt>width=25dp
+height=25dp
+src=@qian.png
+visibility=</ppt>
+<event><eventItme type="clicki">dhas(dh,st_vW, "alpha",0.8,0.9,1)
+dh(dh, "duration", 120)
+dh(dh, "start")
+dhs(dh, 0.9, 1, 0.9, 1, 1, 0.5, 1, 0.5)
+dh(dh, "duration", 300)
+us(st_vW, "dh", dh)
+fr("$账号.txt", username)
+ss("$签到"+username+".txt",签到)
+fr(签到,时间)
+time(2,时候)
+sr(时候,"-","",当前)
+f(当前&gt;时间)
+{
+	fr("$账号.txt", username)
+	ss(sss.api+"/api/qian.php",api)
+	//s 提交 = "{\"username\":\"" + username + "\", \"password\":\"" + password + "\"}"
+	s 提交 = "account="+username
+    utw(null,"","签到中…","",true,vf)
+    {
+    }
+	t()
+	{
+		hs(api, 提交, "utf-8", dui)
+		json(dui, jo)
+		json(jo,"get","msg",msg)
+		ufnsui()
+		{
+			f(msg?"成功")
+			{
+				endutw(vf)
+				fn 着色.控件着色(23,"#d63d3d3d")
+				fw(签到,当前)
+				tw(msg)
+				ug(18,"text",图)
+				f(图=="我的信息")
+				{
+					dhr(dh, 0, 720, 1, 0.5, 1, 0.5)
+					dh(dh, "duration", 1000)
+					us(21, "dh", dh)
+					fn 全局.账号加载()
+				}
+				else
+				{
+					fn 全局.账号加载()
+				}
+			}
+			else
+			{
+				endutw(vf)
+				fn 着色.控件着色(23,"#d63d3d3d")
+				tw(msg)
+                fw(签到,当前)
+			}
+		}
+	}
+}
+else
+{
+	tws(v, "今日已签到过啦！", 0, "好的")
+{
+	
+}
+fn 着色.控件着色(23,"#d63d3d3d")
+}</eventItme></event>
+</View>
+<View id="20" did="5" type="LinearLayout">
+<ppt>width=55dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="21" did="20" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@g/main_list_header_create_folder_pressed.png</ppt>
+<event><eventItme type="clicki">dhas(dh,st_vW, "alpha",0.8,0.9,1)
+dh(dh, "duration", 120)
+dh(dh, "start")
+dhs(dh, 0.9, 1, 0.9, 1, 1, 0.5, 1, 0.5)
+dh(dh, "duration", 300)
+us(st_vW, "dh", dh)
+ug(18,"text",图)
+f(图=="我的图床")
+{
+	syso("我的图床")
+	fn tool.showbt("创建文件夹.iyu", true)
+	ss 创建文件夹=""
+}
+else f(图=="数据统计")
+{
+	fn 全局.数据统计()
+}
+else
+{
+	dhr(dh, 0, 720, 1, 0.5, 1, 0.5)
+	dh(dh, "duration", 1000)
+	us(21, "dh", dh)
+	fn 全局.账号加载()
+}</eventItme></event>
+</View>
+<View id="7" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="8" did="7" type="ViewPager">
+<ppt>width=-1
+height=-1
+overScrollMode=never</ppt>
+<event><eventItme type="onpageselected">f(st_pN==0)
+{
+	us(8,"currentitem",0)
+	us(13,"src","@x/bottombar_btn_file_pre.png")
+	us(15,"src","@x/bottombar_icon_home_nor.png")
+	us(17,"src","@x/bottombar_icon_friend_nor.png")
+	us(18,"text","我的图床")
+	us(21,"src","@g/main_list_header_create_folder_pressed.png")
+	us(21,"pagelimit","0dp")
+}
+
+f(st_pN==1)
+{
+	us(8,"currentitem",1)
+	us(13,"src","@x/bottombar_icon_file_nor.png")
+	us(15,"src","@x/bottombar_btn_home_pre.png")
+	us(17,"src","@x/bottombar_icon_friend_nor.png")
+	us(18,"text","数据统计")
+	us(21,"src","@sx.png")
+	us(21,"padding","3dp")
+	f(ss.加载统计=="是")
+	{
+		
+	}
+	else
+	{
+		fn 全局.数据统计()
+	}
+}
+f(st_pN==2)
+{
+	us(8,"currentitem",2)
+	us(13,"src","@x/bottombar_icon_file_nor.png")
+	us(15,"src","@x/bottombar_icon_home_nor.png")
+	us(17,"src","@x/bottombar_btn_friend_pre.png")
+	us(18,"text","我的信息")
+	us(21,"src","@sx.png")
+	us(21,"padding","3dp")
+	f(sss.修改头像=="是")
+	{
+		sss 修改头像=""
+		fn 全局.账号加载()
+	}
+	else
+	{
+		
+	}
+}</eventItme></event>
+</View>
+<View id="9" did="2" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="10" did="9" type="LinearLayout">
+<ppt>width=-1
+height=0.3dp
+orientation=vertical
+background=#10000000</ppt>
+<event></event>
+</View>
+<View id="11" did="9" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="12" did="11" type="LinearLayout">
+<ppt>width=-1
+height=-1
+layout_weight=1
+gravity=center
+orientation=vertical</ppt>
+<event><eventItme type="clicki">us(8,"currentitem",0)
+us(13,"src","@x/bottombar_btn_file_pre.png")
+us(15,"src","@x/bottombar_icon_home_nor.png")
+us(17,"src","@x/bottombar_icon_friend_nor.png")
+us(18,"text","我的图床")
+us(21,"src","@g/main_list_header_create_folder_pressed.png")
+dhas(dh,13, "alpha",0.8,0.9,1)
+dh(dh, "duration", 120)
+dh(dh, "start")
+dhs(dh, 0.9, 1, 0.9, 1, 1, 0.5, 1, 0.5)
+dh(dh, "duration", 300)
+us(13, "dh", dh)
+us(21,"pagelimit","0dp")</eventItme></event>
+</View>
+<View id="13" did="12" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@x/bottombar_btn_file_pre.png</ppt>
+<event></event>
+</View>
+<View id="14" did="11" type="LinearLayout">
+<ppt>width=-1
+height=-1
+layout_weight=1
+gravity=center
+orientation=vertical</ppt>
+<event><eventItme type="clicki">us(8,"currentitem",1)
+us(13,"src","@x/bottombar_icon_file_nor.png")
+us(15,"src","@x/bottombar_btn_home_pre.png")
+us(17,"src","@x/bottombar_icon_friend_nor.png")
+us(18,"text","数据统计")
+dhas(dh,15, "alpha",0.8,0.9,1)
+dh(dh, "duration", 120)
+dh(dh, "start")
+dhs(dh, 0.9, 1, 0.9, 1, 1, 0.5, 1, 0.5)
+dh(dh, "duration", 300)
+us(15, "dh", dh)
+
+f(ss.加载统计=="是")
+{
+	
+}
+else
+{
+	fn 全局.数据统计()
+}</eventItme></event>
+</View>
+<View id="15" did="14" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@x/bottombar_icon_home_nor.png</ppt>
+<event></event>
+</View>
+<View id="16" did="11" type="LinearLayout">
+<ppt>width=-1
+height=-1
+layout_weight=1
+gravity=center
+orientation=vertical</ppt>
+<event><eventItme type="clicki">us(8,"currentitem",2)
+us(13,"src","@x/bottombar_icon_file_nor.png")
+us(15,"src","@x/bottombar_icon_home_nor.png")
+us(17,"src","@x/bottombar_btn_friend_pre.png")
+us(18,"text","我的信息")
+dhas(dh,17, "alpha",0.8,0.9,1)
+dh(dh, "duration", 120)
+dh(dh, "start")
+dhs(dh, 0.9, 1, 0.9, 1, 1, 0.5, 1, 0.5)
+dh(dh, "duration", 300)
+us(17, "dh", dh)
+us(21,"src","@sx.png")
+us(21,"padding","3dp")</eventItme></event>
+</View>
+<View id="17" did="16" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@x/bottombar_icon_friend_nor.png</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">fn 全局.状态栏()
+fn 全局.api()
+fn 全局.储存路径()
+fn Lottie.loaddex()
+addv(8,"网盘.iyu|广场.iyu|我的.iyu",界面)
+fn 刷新主页列表.刷新("")</eventItme><eventItme type="onactivityresult">java(uri,st_iT,"android.content.Intent.getData")
+call(ok,"mlua","lua.files",uri)
+f(ok==null)
+{
+	
+}
+else
+{
+	f(ss.上传=="是")
+	{
+		utw(null,"","上传中…","",true,vf)
+		{
+		}
+		fr("$账号.txt", username)
+		fr("$密码.txt", password)
+		ss(sss.api + "/api/upload.php", apiUrl)
+		ug(网盘.48,"text",a)
+		s folder = a  // 自定义子文件夹（为空则上传到默认目录）
+		s formData = "username=" +username+"&password=" +password+ "&folder=" + folder
+		s uploadFile = "image\n" + ok
+		// 启动线程上传（避免阻塞主线程）
+		t() {
+			// 调用裕语言原生huf函数上传文件
+			// 参数：API地址、表单参数、上传文件、编码、请求头、返回结果
+			s headers = "User-Agent=Mozilla/5.0 (Android; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0"
+			huf(apiUrl, formData, uploadFile, "utf-8", result)
+			// 成功判断（根据PHP返回的code）
+			json(result,jo)
+			json(jo,"get","msg",提示)
+			ufnsui()
+			{
+				f(提示?"成功")
+				{
+					endutw(vf)
+					fn 刷新主页列表.刷新(a)
+				}
+				else
+				{
+					endutw(vf)
+					tws(v, 提示, 0, "充值")
+					{
+						fr("$账号.txt", user)
+						sxb(user)
+						tw("已复制您的用户ID")
+						ss(sss.api+"/api/pay.php?name="+user,sss.wz)
+						uigo("浏览.iyu")
+					}
+				}
+			}
+		}
+	}
+	else
+	{
+		
+	}
+}</eventItme><eventItme type="loadingComplete">dht(scf,0,0,1000,0)
+dh(scf,"duration",800)
+us(网盘.18,"dh",scf)
+us(网盘.18,"visibility","visible")
+fr("@json/box.json",data)
+fn Lottie.setImageLottie(网盘.51,data,0,true)
+fr("$账号.txt", username)
+ss(sss.api+"/api/zhexian.php?author="+username,统计)
+us(广场.2,"url",统计)
+ss("$签到"+username+".txt",签到)
+fr(签到,时间)
+time(2,时候)
+sr(时候,"-","",当前)
+f(当前&gt;时间)
+{
+}
+else
+{
+	fn 着色.控件着色(23,"#d63d3d3d")
+}
+t()
+{
+	s api_url = sss.api+"/api/guanggao.php"
+	hs(api_url, encoded_data, "utf-8", result, err)
+	sj(err,"指定：","&lt;br&gt;",图片)
+	sj(err,"内容：","&lt;br&gt;",sss.广告图片)
+	ufnsui()
+	{
+		f(图片?"http")
+		{
+			us(我的.58,"src",图片)
+			us(我的.56,"visibility","visible")
+		}
+		else
+		{
+			us(我的.56,"visibility","gone")
+		}
+	}
+}
+
+fn 全局.账号加载()</eventItme><eventItme type="restart">f(sss.删除成功=="是")
+{
+	sss 删除成功=""
+	ug(网盘.48,"text",文件)
+	fn 刷新主页列表.刷新(文件)
+}
+else
+{
+	
+}
+f(sss.兑换成功=="是")
+{
+	ug(18,"text",图)
+	f(图=="我的信息")
+	{
+		dhr(dh, 0, 720, 1, 0.5, 1, 0.5)
+		dh(dh, "duration", 1000)
+		us(21, "dh", dh)
+        sss 兑换成功=""
+		fn 全局.账号加载()
+	}
+	else
+	{
+		sss 兑换成功=""
+		fn 全局.账号加载()
+	}
+}
+else
+{
+	
+}</eventItme><eventItme type="downkey">f(st_kC == 4)
+{
+	ug(网盘.48,"text",路径)
+	f(路径=="")
+	{
+		f(ss.exit=="是")
+		{
+			end()
+		}
+		else
+		{
+			tw("再按一次退出")
+			ss exit="是"
+		}
+	}
+	else
+	{
+		ug(网盘.48,"text",a)
+		s b = "^(.+/).+$"
+		s c = 0
+		s d = ""
+		s isMatch = ""
+		s result = ""
+		se(a, b, c, d)
+		se(d, "find", isMatch)
+		f(isMatch == "true")
+		{
+			se(d, "group", 1, result)
+            us(网盘.48,"text",result)
+			fn 刷新主页列表.刷新(result)
+		}
+		else
+		{
+			us(网盘.48,"text","")
+			fn 刷新主页列表.刷新("")
+		}
+	}
+}
+else
+{
+	
+}</eventItme></UIEventset>

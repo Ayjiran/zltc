@@ -1,0 +1,437 @@
+<View id="55" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="59" did="55" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="60" did="59" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="1" did="60" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#FAFAFAFA</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=90dp
+orientation=horizontal
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=90dp
+height=-1
+gravity=center
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="CardView">
+<ppt>width=60dp
+height=60dp
+app_CardBackgroundColor=#00000000
+app_CardcornerRadius=30dp
+app_CardElevation=0</ppt>
+<event></event>
+</View>
+<View id="61" did="4" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="5" did="61" type="LinearLayout">
+<ppt>width=-1
+height=-1
+gravity=center
+orientation=vertical
+background=#ffd3ebff</ppt>
+<event><eventItme type="clicki">/.ss 上传="否"
+sit(a, "action", "android.intent.action.PICK")
+sit(a, "type", "*/*")
+uit(a, "result",1)</eventItme></event>
+</View>
+<View id="6" did="5" type="ImageView">
+<ppt>width=25dp
+height=25dp
+src=@b/release_legend.png</ppt>
+<event></event>
+</View>
+<View id="65" did="61" type="ImageView">
+<ppt>width=-1
+height=-1
+src=@b/R_k_mtx_png.png</ppt>
+<event></event>
+</View>
+<View id="66" did="3" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="7" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-1
+layout_weight=1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="8" did="7" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=center|left</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=TA
+textColor=#FF1A2734
+textSize=17sp
+textIsSelectable=true</ppt>
+<event></event>
+</View>
+<View id="10" did="7" type="LinearLayout">
+<ppt>width=-1
+height=30dp
+orientation=vertical
+gravity=center|left</ppt>
+<event></event>
+</View>
+<View id="11" did="10" type="TextView">
+<ppt>width=-2
+height=-2
+text=普通用户
+textColor=#a74a4a4a
+textSize=14sp</ppt>
+<event></event>
+</View>
+<View id="12" did="2" type="LinearLayout">
+<ppt>width=100dp
+height=-1
+gravity=center|right
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="52" did="12" type="CardView">
+<ppt>width=100dp
+height=35dp
+app_CardcornerRadius=30dp
+layout_marginRight=-30dp</ppt>
+<event></event>
+</View>
+<View id="53" did="52" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffffff
+gravity=center_vertical</ppt>
+<event><eventItme type="clicki">fr("$账号.txt", user)
+sxb(user)
+tw("已复制您的用户ID")
+ss(sss.api+"/api/pay.php?name="+user,sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="54" did="53" type="TextView">
+<ppt>width=-2
+height=-2
+text=充 值
+layout_marginLeft=15dp
+textColor=#1E88E5
+textStyle=bold</ppt>
+<event></event>
+</View>
+<View id="14" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="15" did="14" type="LinearLayout">
+<ppt>width=-1
+height=0dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="16" did="14" type="LinearLayout">
+<ppt>width=-1
+height=70dp
+orientation=horizontal
+background=#ffffffff
+visibility=gon</ppt>
+<event></event>
+</View>
+<View id="17" did="16" type="LinearLayout">
+<ppt>width=-1
+height=-1
+layout_weight=1
+gravity=center
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="18" did="17" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@g/grid_icon_phone_forget.png</ppt>
+<event></event>
+</View>
+<View id="19" did="17" type="TextView">
+<ppt>width=-2
+height=-2
+text=暂无会员
+textColor=#FFFF9655
+layout_marginTop=5dp
+textSize=14sp</ppt>
+<event></event>
+</View>
+<View id="22" did="16" type="LinearLayout">
+<ppt>width=-1
+height=-1
+layout_weight=1
+gravity=center
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="23" did="22" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@g/grid_icon_p2pshare.png</ppt>
+<event></event>
+</View>
+<View id="24" did="22" type="TextView">
+<ppt>width=-2
+height=-2
+text=余额:0
+textColor=#FFFFB544
+layout_marginTop=5dp
+textSize=14sp</ppt>
+<event></event>
+</View>
+<View id="49" did="16" type="LinearLayout">
+<ppt>width=-1
+height=-1
+layout_weight=1
+gravity=center
+orientation=vertical
+visibility=gon</ppt>
+<event><eventItme type="clicki">//fn tool.showbt("兑换.iyu", true)
+ug(我的.66,"text",sss.头像)
+uigo("兑换.iyu")</eventItme></event>
+</View>
+<View id="50" did="49" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@dui.png</ppt>
+<event></event>
+</View>
+<View id="51" did="49" type="TextView">
+<ppt>width=-2
+height=-2
+text=兑换
+textColor=#ffba0000
+layout_marginTop=5dp
+textSize=14sp</ppt>
+<event></event>
+</View>
+<View id="25" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+padding=3dp</ppt>
+<event></event>
+</View>
+<View id="26" did="25" type="LinearLayout">
+<ppt>width=-1
+height=2dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="27" did="25" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+background=#ffffffff
+BackgroundRipple=#00000000</ppt>
+<event><eventItme type="clicki">uigo("修改密码.iyu")</eventItme></event>
+</View>
+<View id="28" did="27" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="29" did="28" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@g/icon_pswd_modify_setting.png</ppt>
+<event></event>
+</View>
+<View id="30" did="27" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center|left</ppt>
+<event></event>
+</View>
+<View id="31" did="30" type="TextView">
+<ppt>width=-2
+height=-2
+text=修改密码
+textColor=#FF313B4B
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="42" did="25" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+background=#ffffffff
+layout_marginTop=1dp</ppt>
+<event><eventItme type="clicki">ss(sss.api+"/help.php",sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="43" did="42" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="44" did="43" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@g/icon_advanced_setting.png</ppt>
+<event></event>
+</View>
+<View id="45" did="42" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center|left</ppt>
+<event></event>
+</View>
+<View id="46" did="45" type="TextView">
+<ppt>width=-2
+height=-2
+text=功能须知
+textColor=#FF313B4B
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="32" did="25" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+background=#ffffffff
+layout_marginTop=1dp
+BackgroundRipple=#00000000</ppt>
+<event><eventItme type="clicki">uigo("关于我们.iyu")</eventItme></event>
+</View>
+<View id="33" did="32" type="LinearLayout">
+<ppt>width=50dp
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="34" did="33" type="ImageView">
+<ppt>width=20dp
+height=20dp
+src=@g/icon_about_setting.png</ppt>
+<event></event>
+</View>
+<View id="35" did="32" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center|left</ppt>
+<event></event>
+</View>
+<View id="36" did="35" type="TextView">
+<ppt>width=-2
+height=-2
+text=关于我们
+textColor=#FF313B4B
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="56" did="1" type="CardView">
+<ppt>width=-1
+height=150dp
+layout_margin=10dp
+app_CardcornerRadius=5dp
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="57" did="56" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="58" did="57" type="ImageView">
+<ppt>width=-1
+height=-1
+src=@IMG_20210122_223154.png
+scaleType=centercrop</ppt>
+<event><eventItme type="clicki">sss wz=sss.广告图片
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="37" did="55" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=bottom
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="38" did="37" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=center
+</ppt>
+<event></event>
+</View>
+<View id="41" did="38" type="CardView">
+<ppt>width=-1
+height=40dp
+app_CardcornerRadius=25dp
+app_CardElevation=0
+layout_marginLeft=20dp
+layout_marginTop=10dp
+layout_marginRight=20dp
+layout_marginBottom=10dp</ppt>
+<event></event>
+</View>
+<View id="40" did="41" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+background=#FFEBEE</ppt>
+<event><eventItme type="clicki">utw(null,"","退出账号弹窗.iyu","",false,ss.退出账号)
+{
+}</eventItme></event>
+</View>
+<View id="39" did="40" type="TextView">
+<ppt>width=-2
+height=-2
+text=退 出 账 号
+textSize=15sp
+textColor=#ffff0000</ppt>
+<event></event>
+</View>
+<UIEventset></UIEventset>

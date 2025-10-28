@@ -1,0 +1,134 @@
+fn readfile(ss.path)
+us(9,"visibility","visible")
+t()
+{
+  //设置返回上级列表
+  ula(list,2="@b/R_k_fdr_png.png",4="...",5="返回上级",1=null)
+  ss result=""
+  fl(ss.path,file_list)
+  for(file; file_list)
+  {
+    s zt="true"
+    ss("\"+"nfas", n)
+    ss(ss.result+file+n, ss.result)
+  }
+  f(zt==null)
+  {
+    ufnsui()
+    {
+      //获取上级目录
+      slof(ss.path,"/",wz)
+      ssg(ss.path,0,wz,path)
+      f(path?"/")
+      {
+        slof(path,"/",wz)
+        ssg(path,0,wz,path)
+        ss(path+"/",ss.path)
+      }
+      else
+      {
+        ss path="%"
+      }
+      //记忆路径
+//      fw("$path.txt",ss.path)
+      tw("此文件夹空！",0)
+    }
+  endcode
+  }
+  //syso(ss.result)
+  ss("md('"+ss.result+"')", js)
+  ufnsui()
+  {
+    //js交互
+    has(14, js)
+  }
+  stop(100)
+  ufnsui()
+  {
+    ug(14, "title", a)
+    //syso(a)
+    //分割数组
+    sl(a,"/n",array)
+    for(filename;array)
+    {
+      //syso(filename)
+      //组合绝对路径
+      ss(ss.path+filename+"/",jdpath)
+      //syso(jdpath)
+      //判断路径是否文件夹
+      fi(jdpath,sfdir)
+      f(sfdir==false)
+      {
+        //判断文件类型，更多格式请自行添加判断
+        //判断是否txt
+        f(filename*?".txt")
+        {
+          s icon="@b/R_k_fcv_png.png" 
+        }
+        //判断图片文件
+        else f(filename*?".png"||filename*?".jpg")
+        {
+          s icon="@b/R_k_fdd_png.png"
+        }  
+        //视频文件
+        else f(filename*?".mp4")
+        {
+        s icon="@b/R_k_fch_png.png"
+        } 
+        //音乐文件
+        else f(filename*?".mp3")
+        {
+          s icon="@b/R_k_fdc_png.png"
+        }      
+        //安装包文件
+        else f(filename*?".apk")
+        {
+          s icon="@b/R_k_fdw_png.png"
+        }
+        //html文件
+        else f(filename*?".html")
+        {
+          s icon="@b/R_k_fco_png.png"
+        }
+        //zip
+        else f(filename*?".zip")
+        {
+          s icon="@b/R_k_fcf_png.png"
+        }
+        //其他
+        else
+        {
+          s icon="@b/R_k_fco_png.png"
+        }
+          //计算文件大小
+          fs(jdpath,size)
+          s2(size/1024,size)
+          f(size&lt;1024)
+          {
+            ss(size+"KB",s)
+          }
+          else
+          {
+            s2(size/1024,size)
+            ss(size+"MB",s)
+          }
+      }
+      else
+      {
+        s icon="@b/R_k_fdr_png.png"
+        s s="文件夹"
+      }
+  
+      ula(list,1=null,2=icon,4=filename,3=jdpath,5=s)
+    }
+    ufnsui()
+    {
+      //加载完成，显示列表
+      uls(13,list,"本地文件列表.iyu",-1,-2)
+    
+    }
+  }
+}
+end fn
+
+

@@ -1,0 +1,258 @@
+<View id="20" did="0" type="CardView">
+<ppt>width=-1
+height=-2
+app_CardcornerRadius=5dp
+layout_marginLeft=5dp
+layout_marginRight=5dp</ppt>
+<event></event>
+</View>
+<View id="7" did="20" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="14" did="7" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=horizontal
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="23" did="14" type="ImageView">
+<ppt>width=25dp
+height=25dp
+src=@wjj.png
+layout_marginleft=16dp</ppt>
+<event></event>
+</View>
+<View id="16" did="14" type="TextView">
+<ppt>width=-2
+height=-2
+text=创建文件夹
+layout_margin=10dp
+textSize=18sp
+textColor=#1E88E5</ppt>
+<event></event>
+</View>
+<View id="18" did="7" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+padding=8dp</ppt>
+<event></event>
+</View>
+<View id="24" did="18" type="ScrollView">
+<ppt>width=-1
+height=-2</ppt>
+<event></event>
+</View>
+<View id="28" did="24" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="32" did="28" type="EditText">
+<ppt>width=-1
+height=40dp
+text=
+hint=输入您的文件夹名字…
+textsize=12dp
+background=#ab404040
+singleline=true
+textCursorDrawable=#ff009bff
+focusable=true
+focusableInTouchMode=true
+background=#2eebebeb</ppt>
+<event><eventItme type="aftertextchanged">gvs(st_vW,创建文件夹.32,ss.创建文件夹)
+ug(ss.创建文件夹,"text",ss.创建文件夹)</eventItme></event>
+</View>
+<View id="12" did="7" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal
+gravity=right
+layout_marginTop=5dp</ppt>
+<event></event>
+</View>
+<View id="33" did="12" type="TextView">
+<ppt>width=-2
+height=-2
+text=取 消
+textColor=#1E88E5
+textSize=14dp
+layout_marginRight=20dp
+</ppt>
+<event><eventItme type="clicki">fn tool.endubt()</eventItme></event>
+</View>
+<View id="22" did="12" type="Button">
+<ppt>width=80dp
+height=40dp
+text=创 建
+textColor=#ffffff
+textSize=14dp
+background=#1E88E5
+layout_marginRight=10dp
+BackgroundRipple=#ffffff
+layout_marginBottom=10dp</ppt>
+<event><eventItme type="clicki">f(ss.创建文件夹=="")
+{
+	tw("请输入文件夹名称")
+}
+else
+{
+	slg(ss.创建文件夹,字符)
+	f(字符&lt;2)
+	{
+		tw("文件夹名称不得小于两个字符")
+	}
+	else f(ss.创建文件夹?".")
+	{
+		tw("禁止.等特殊符号")
+	}
+	else
+	{
+		ug(网盘.48,"text",路径)
+		// 读取账号密码
+		fr("$账号.txt", username)
+		fr("$密码.txt", password)
+		s parent = 路径 // 中文多级父目录
+		// 配置API地址和要创建的文件夹名（动态参数）
+		s apiUrl = sss.api+"/api/wenjianjia.php"
+		stobm(ss.创建文件夹, "utf-8", 创建文件夹)
+		stobm(parent, "utf-8", parentPath)
+		ss(parent+ss.创建文件夹,进入目录)
+		s newFolderName = 创建文件夹 // 可从用户输入获取，需符合命名规则
+		
+		// 构建表单参数（注意：文件夹名若含中文，需确保编码正确）
+		s formData = "username=" + username + "&password=" + password + "&folder_name=" + newFolderName+"&parent_path=" + parentPath
+		// 发送POST请求
+		t()
+		{
+			huf(apiUrl, formData, "", "utf-8", "", result)
+			ufnsui()
+			{
+				syso("创建结果：" + result)
+				// 解析结果并提示
+				json(result, jo)
+				json(jo, "get", "msg", tip)
+				f(tip?"成功")
+				{
+					f(路径==null)
+					{
+						s 路径=""
+					}
+					else
+					{
+					}
+					us(网盘.15,"refreshing","true")
+					fr("$账号.txt", username)
+					fr("$密码.txt", password)
+					ss(sss.api+"/list.php",api)
+					//s 提交 = "{\"username\":\"" + username + "\", \"password\":\"" + password + "\"}"
+					s 提交 = "username=" + username + "&password=" + password+ "&folder_path=" + 路径
+					t()
+					{
+						hs(api, 提交, "utf-8", dui)
+						json(dui, jo)
+						json(jo, "get", "data", data_obj)
+						json(data_obj, "list", "items", file_list)
+						json(file_list, "size", size)
+						ufnsui()
+						{
+							f(jo?"错误")
+							{
+								us(网盘.15,"refreshing","false")
+								tws(v, "请重新登录！", 0, "好的")
+								{
+									end()
+								}
+							}
+							else
+							{
+								f(size==0||jo?"目录不存在")
+								{
+									ufnsui()
+									{
+										f(路径==""||路径==null)
+										{
+											
+										}
+										else
+										{
+											us(网盘.48,"text",路径)
+										}
+										syso("无数据")
+										us(网盘.15,"refreshing","false")
+										us(网盘.50,"visibility","visible")
+										us(网盘.4,"visibility","gone")
+									}
+								}
+								else
+								{
+									s li
+									w(size &gt; 0)
+									{
+										s index = 0
+										w(index &lt; size)
+										{
+											json(file_list, "data", index, file_item)
+											json(file_item, "get", "name", name)
+											json(file_item, "get", "modify_time", time)
+											json(file_item, "get", "relative_path", img)
+											ss(sss.api+"/"+img,src)
+											f(name?".")
+											{
+												ula(li, 5 = name,6=time,14=src,8=img,3="@g/copy_icon_pic.png",16="@you.png")
+											}
+											else
+											{
+												ula(li, 5 = name,6=time,3="@file/file.png",16="@sc.png")
+											}
+											s+(1, index)
+										}
+										ufnsui()
+										{
+											f(路径==""||路径==null)
+											{
+												
+											}
+											else
+											{
+												us(网盘.48,"text",路径)
+											}
+											uls(网盘.4, li, "文件列表.iyu", -1, -2)
+											us(网盘.15,"refreshing","false")
+											us(网盘.50,"visibility","gone")
+											us(网盘.4,"visibility","visible")
+										}
+										break
+									}
+								}
+							}
+						}
+					}
+				}
+				else
+				{
+					tw(tip)
+				}
+				fn tool.endubt()
+			}
+		}
+	}
+}</eventItme></event>
+</View>
+<UIEventset><eventItme type="loading">
+
+ 
+
+
+ 
+
+
+
+/.
+
+</eventItme></UIEventset>

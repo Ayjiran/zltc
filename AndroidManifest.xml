@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<title>智链图床</title>
+<icon>icon.png</icon>
+<packageName>com.zltc.huanyin</packageName>
+<versionName>1.0</versionName>
+<versionint>1</versionint>
+<sdk>15</sdk>
+<yuv>3</yuv>
+<remark></remark>
+<Permissions>android.permission.VIBRATE
+android.permission.INTERNET
+android.permission.READ_EXTERNAL_STORAGE
+android.permission.WRITE_EXTERNAL_STORAGE</Permissions>
+<createTime>2019-05-23 21:07:49</createTime>
+<upTime>2019-05-23 21:07:49</upTime>

@@ -1,0 +1,125 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="5" did="3" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="6" did="5" type="LinearLayout">
+<ppt>width=65dp
+height=-1
+gravity=center
+orientation=vertical</ppt>
+<event><eventItme type="clicki">end()</eventItme></event>
+</View>
+<View id="7" did="6" type="TextView">
+<ppt>width=-2
+height=-2
+text=返回
+textColor=#1E88E5
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="8" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=选择文件
+textColor=#000000
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="10" did="5" type="LinearLayout">
+<ppt>width=65dp
+height=-1
+gravity=center
+orientation=vertical
+visibility=invisible</ppt>
+<event><eventItme type="clicki">end()</eventItme></event>
+</View>
+<View id="11" did="10" type="TextView">
+<ppt>width=-2
+height=-2
+text=返回
+textColor=#1E88E5
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="12" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="13" did="12" type="RecyclerView">
+<ppt>width=-1
+height=-2
+background=#ffffffff
+overScrollMode=never</ppt>
+<event></event>
+</View>
+<View id="14" did="12" type="WebView">
+<ppt>width=-2
+height=-2
+visibility=gone</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">fn 全局.状态栏()
+fn 全局.api()
+fn 全局.储存路径()
+
+//读取js代码
+fr("@order.js", "utf-8", jscode)
+//初始化浏览器
+us(14, "url", jscode, "utf-8", "text/html", f)
+//浏览器交互
+hsas(14, true)
+
+/.
+//判断记忆路径
+fe("$path.txt",pd)
+f(pd==true)
+{
+  fr("$path.txt",path)
+}
+else
+{
+  s path="%"
+}
+./
+//取消判断记录文件，默认为%文件夹
+s path="%"
+//调用模块加载列表
+fn 文件.readfile(path)</eventItme></UIEventset>

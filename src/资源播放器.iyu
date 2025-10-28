@@ -1,0 +1,139 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#FAFAFAFA</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="5" did="3" type="LinearLayout">
+<ppt>width=-1
+height=55dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="6" did="5" type="LinearLayout">
+<ppt>width=65dp
+height=-1
+gravity=center
+orientation=vertical</ppt>
+<event><eventItme type="clicki">end()</eventItme></event>
+</View>
+<View id="7" did="6" type="TextView">
+<ppt>width=-2
+height=-2
+text=返回
+textColor=#1E88E5
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="8" did="5" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="9" did="8" type="TextView">
+<ppt>width=-2
+height=-2
+text=文件预览
+textColor=#000000
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="10" did="5" type="LinearLayout">
+<ppt>width=65dp
+height=-1
+gravity=center
+orientation=vertical
+visibility=invisible</ppt>
+<event><eventItme type="clicki">end()</eventItme></event>
+</View>
+<View id="11" did="10" type="TextView">
+<ppt>width=-2
+height=-2
+text=返回
+textColor=#1E88E5
+textSize=17sp</ppt>
+<event></event>
+</View>
+<View id="12" did="2" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+gravity=center
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="13" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="NestedScrollView">
+<ppt>width=-1
+height=-2</ppt>
+<event></event>
+</View>
+<View id="15" did="13" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="16" did="15" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@e/null_photo_uploading.png</ppt>
+<event></event>
+</View>
+<View id="17" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">fn 全局.api()
+fn 全局.储存路径()
+f(sss.预览类型=="图片")
+{
+  fn 全局.状态栏()
+  us(13,"visibility","visible")
+ t()
+{
+  call(back,"mjava","图片预览.getInternetPicture",sss.预览链接)
+  ufnsui()
+  {
+    //背景可以设置哦
+    us(16,"src",back)
+  }
+}
+}
+else f(sss.预览类型=="视频")
+{
+  
+}</eventItme></UIEventset>

@@ -1,0 +1,193 @@
+<View id="25" did="0" type="Toolbar">
+<ppt>width=-1
+height=48dp
+background=white
+app_title=修改密码
+app_TitleColor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#FAFAFAFA</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="12" did="2" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffffffff</ppt>
+<event></event>
+</View>
+<View id="13" did="12" type="LinearLayout">
+<ppt>width=-1
+height=80dp
+orientation=vertical
+gravity=center|bottom
+padding=15dp</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="LinearLayout">
+<ppt>width=-1
+height=50dp
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="15" did="14" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+layout_weight=1
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="16" did="15" type="EditText">
+<ppt>width=-1
+height=-1
+text=
+hint=请输入新的密码
+textColor=#000000
+textColorHint=#50000000
+textSize=15sp
+singleLine=true
+maxLength=16
+inputType=textpassword
+background=#FAFAFAFA</ppt>
+<event></event>
+</View>
+<View id="17" did="14" type="LinearLayout">
+<ppt>width=-1
+height=1dp
+background=#10000000
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="18" did="12" type="LinearLayout">
+<ppt>width=-1
+height=80dp
+gravity=center
+orientation=vertical
+padding=15dp</ppt>
+<event></event>
+</View>
+<View id="19" did="18" type="CardView">
+<ppt>width=-1
+height=40dp
+app_CardcornerRadius=25dp
+app_CardElevation=0</ppt>
+<event></event>
+</View>
+<View id="20" did="19" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=#ffd1eaff
+gravity=center</ppt>
+<event><eventItme type="clicki">ug(16,"text",新密码)
+f(新密码=="")
+{
+	tw("请输入新密码")
+}
+else
+{
+	utw(null,"","修改数据…","",true,vf)
+    {
+    }
+	// 读取账号和原密码（假设从文件读取）
+	fr("$账号.txt", username)
+	fr("$密码.txt", old_password)
+	// 新密码（可通过输入框获取，示例固定为12345678）
+	s new_password = 新密码
+	
+	// 构建POST参数
+	ss("username=" + username + "&old_password=" + old_password + "&new_password=" + new_password, post_data)
+	stobm(post_data, "utf-8", encoded_data)
+	
+	// 发送请求
+	t() {
+		s api_url = sss.api+"/api/password.php"
+		hs(api_url, encoded_data, "utf-8", result, err)
+		json(err,jo)
+		json(jo,"get","msg",结果)
+		f(结果?"成功")
+		{
+			endutw(vf)
+			fw("$账号.txt", username)
+			fw("$密码.txt", 新密码)
+            end()
+		}
+		else
+		{
+			endutw(vf)
+			tw(结果)
+		}
+	}
+}</eventItme></event>
+</View>
+<View id="21" did="20" type="TextView">
+<ppt>width=-2
+height=-2
+text=确 认 修 改
+textColor=#1E88E5
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="22" did="12" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+padding=15dp</ppt>
+<event></event>
+</View>
+<View id="23" did="22" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=center|left</ppt>
+<event></event>
+</View>
+<View id="24" did="23" type="TextView">
+<ppt>width=-2
+height=-2
+text=注:忘记密码请联系客服！
+textColor=#50000000
+textSize=13sp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">fn 全局.状态栏()
+fn 全局.api()
+fn 全局.储存路径()
+s id=25
+utb(id)
+java(mTba, activity, "android.support.v7.app.AppCompatActivity.getSupportActionBar")
+java(null, mTba, "android.support.v7.app.ToolbarActionBar.setDisplayHomeAsUpEnabled", "boolean", true)
+//设置左边为返回键
+utb("left", id, "@coolbackhei.png")
+utb("set", "leftck", id)
+{
+  uzd(震动器, 30)
+  end()
+}
+fr("$颜色.txt",颜色)
+fn 着色.控件着色(id,颜色)</eventItme></UIEventset>

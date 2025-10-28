@@ -1,0 +1,169 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>
+width=-1
+height=-1
+orientation=vertical
+gravity=center
+</ppt>
+<event>
+</event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>
+width=285dp
+height=-2
+orientation=vertical
+background=white
+</ppt>
+<event>
+</event>
+</View>
+<View id="3" did="2" type="LinearLayout">
+<ppt>
+width=-1
+height=50dp
+orientation=vertical
+gravity=center_horizontal
+</ppt>
+<event>
+</event>
+</View>
+<View id="4" did="3" type="TextView">
+<ppt>
+width=-2
+height=-2
+text=标题
+textColor=#000000
+textSize=16.5sp
+textStyle=bold
+layout_marginTop=20dp
+typeface=@fonts/Ex_GameFont.ttf
+</ppt>
+<event>
+</event>
+</View>
+<View id="5" did="2" type="LinearLayout">
+<ppt>
+width=-1
+height=-2
+orientation=vertical
+gravity=center_horizontal
+</ppt>
+<event>
+</event>
+</View>
+<View id="15" did="5" type="ScrollView">
+<ppt>
+width=-1
+height=-1
+visibility=gone
+</ppt>
+<event>
+</event>
+</View>
+<View id="7" did="5" type="TextView">
+<ppt>
+width=-2
+height=-2
+text=内容
+typeface=@fonts/Ex_GameFont.ttf
+layout_marginLeft=20dp
+layout_marginRight=20dp
+textColor=#212121
+textSize=13.5sp
+lineSpacingMultiplier=1.2
+layout_marginBottom=15dp
+gravity=center
+</ppt>
+<event>
+</event>
+</View>
+<View id="6" did="2" type="LinearLayout">
+<ppt>
+width=-1
+height=0.2dp
+orientation=vertica
+background=#E0E0E0
+</ppt>
+<event>
+</event>
+</View>
+<View id="9" did="2" type="LinearLayout">
+<ppt>
+width=-1
+height=45dp
+orientation=horizontal
+</ppt>
+<event>
+</event>
+</View>
+<View id="10" did="9" type="LinearLayout">
+<ppt>
+width=142dp
+height=-1
+orientation=vertical
+gravity=center
+</ppt>
+<event>
+<eventItme type="clicki">
+java(null,ss.vv,"android.app.Dialog.dismiss")
+</eventItme>
+</event>
+</View>
+<View id="13" did="10" type="TextView">
+<ppt>
+width=-2
+height=-2
+text=取消
+textSize=14.5sp
+textColor=#555555
+typeface=@fonts/Ex_GameFont.ttf
+textStyle=bold
+</ppt>
+<event>
+</event>
+</View>
+<View id="11" did="9" type="LinearLayout">
+<ppt>
+width=0.2dp
+height=-1
+orientation=vertical
+background=#E0E0E0
+</ppt>
+<event>
+</event>
+</View>
+<View id="12" did="9" type="LinearLayout">
+<ppt>
+width=142dp
+height=-1
+orientation=vertical
+gravity=center
+</ppt>
+<event>
+<eventItme type="clicki">
+java(null,ss.vv,"android.app.Dialog.dismiss")
+</eventItme>
+</event>
+</View>
+<View id="14" did="12" type="TextView">
+<ppt>
+width=-2
+height=-2
+text=了解
+textSize=14.5sp
+textColor=#ff226ce3
+typeface=@fonts/Ex_GameFont.ttf
+textStyle=bold
+</ppt>
+<event>
+</event>
+</View>
+<UIEventset>
+
+<eventItme type="loading">/.
+@@ 枋染开源 
+@@ 持续更新UI系列，好用请好评。
+@@ QQ群: 641609076 加群支持一下呗~ 可以加群反馈和交流，需要什么样的源码就说一下，看情况我会将好的作品分享到共享空间。
+@@ 枋染QQ: 1455595238 别怕尴尬，欢迎来聊天/业务合作
+./</eventItme></UIEventset>

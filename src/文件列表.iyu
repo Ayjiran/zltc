@@ -1,0 +1,181 @@
+<View id="10" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-2</ppt>
+<event></event>
+</View>
+<View id="1" did="10" type="LinearLayout">
+<ppt>width=-1
+height=60dp
+background=#ffffffff
+orientation=horizontal
+BackgroundRipple=#10000000</ppt>
+<event><eventItme type="clicki">ulag(st_vW,5,sss.文件名称)
+f(sss.文件名称?".")
+{
+	ug(网盘.48,"text",sss.图片路径)
+	ulag(st_vW,8,sss.图片)
+	uigo("查看文件.iyu")
+}
+else
+{
+	f(sss.会员状态=="是")
+	{
+	ug(网盘.48,"text",路径)
+    ss(路径+sss.文件名称+"/",路径)
+	fn 刷新主页列表.刷新(路径)
+    }
+    else
+    {
+    	tws(v, "非会员不支持多级操控！", 0, "开通")
+	{
+		uigo("兑换.iyu")
+	}
+    }
+}</eventItme></event>
+</View>
+<View id="2" did="1" type="LinearLayout">
+<ppt>width=60dp
+height=-1
+gravity=center
+orientation=vertical
+layout_marginLeft=5dp</ppt>
+<event></event>
+</View>
+<View id="13" did="2" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="3" did="13" type="ImageView">
+<ppt>width=30dp
+height=30dp
+src=@g/copy_icon_pic.png
+scaleType=centercrop
+ut_centerInParent=true</ppt>
+<event></event>
+</View>
+<View id="14" did="13" type="ImageView">
+<ppt>width=40dp
+height=40dp
+src=@tou.PNG
+scaleType=centercrop
+ut_centerInParent=true
+</ppt>
+<event></event>
+</View>
+<View id="15" did="1" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=center_vertical</ppt>
+<event></event>
+</View>
+<View id="4" did="15" type="LinearLayout">
+<ppt>width=-2
+height=-1
+gravity=center|left
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="5" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=文件名称
+textColor=#FF313B4B
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="6" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=文件时间
+layout_marginTop=5dp
+textColor=#FF8BA5AE
+textSize=11sp</ppt>
+<event></event>
+</View>
+<View id="8" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=文本8
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="9" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=文本8
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="11" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=文本8
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="17" did="15" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="7" did="10" type="LinearLayout">
+<ppt>width=-1
+height=1dp
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="16" did="10" type="ImageView">
+<ppt>width=28dp
+height=28dp
+src=@you.png
+layout_marginRight=10dp
+ut_alignParentRight=true
+ut_centerVertical=true</ppt>
+<event><eventItme type="clicki">ulag(st_vW,5,文件名称)
+f(文件名称?".")
+{
+	sss 文件名称=文件名称
+	ug(网盘.48,"text",sss.图片路径)
+	ulag(st_vW,8,sss.图片)
+	uigo("查看文件.iyu")
+}
+else
+{
+	tws(v, "确定删除文件夹?", 0, "是的")
+	{
+		fr("$账号.txt", username)
+		fr("$密码.txt", password)
+		ug(网盘.48,"text",路径)
+		s apiUrl = sss.api + "/api/shanchu.php"
+		s targetName = 文件名称 // 要删除的目录名
+		s deleteType = "dir" // 类型设为dir
+		stobm(targetName, "utf-8", encodedTarget)
+        stobm(路径, "utf-8", encodedFolder)
+		s formData = "username=" + username + "&password=" + password + "&target_name=" + encodedTarget + "&folder_path=" + encodedFolder + "&delete_type=" + deleteType
+    	t()
+		{
+			huf(apiUrl, formData, "", "utf-8", "", result)
+			ufnsui()
+			{
+				syso("删除结果：" + result)
+				json(result, jo)
+				json(jo, "get", "msg", tip)
+				f(tip ? "成功")
+				{
+					fn 刷新主页列表.刷新(路径)
+				}
+                else
+                {
+                	tw(tip)
+                }
+			}
+		}
+	}
+}</eventItme></event>
+</View>
+<UIEventset></UIEventset>

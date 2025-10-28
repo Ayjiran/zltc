@@ -1,0 +1,114 @@
+<View id="3" did="0" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="1" did="3" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white
+
+</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="ImageView">
+<ppt>width=-1
+height=200dp
+src=@wd/tou.PNG
+layout_gravity=center
+layout_marginTop=150dp</ppt>
+<event></event>
+</View>
+<View id="4" did="3" type="LinearLayout">
+<ppt>width=-1
+height=120dp
+orientation=vertical
+gravity=center
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="5" did="4" type="TextView">
+<ppt>width=-2
+height=-2
+text=智 链 图 床
+textColor=#ff000000
+textStyle=bold
+textSize=20sp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">uycl("#ffffffff",true)
+java(cs, activity, "android.app.Activity.getWindow")
+java(cs2, cs, "android.view.Window.getDecorView")
+java(null, cs2, "android.view.View.setSystemUiVisibility", "int", "8192")
+fw("$颜色.txt","#1E88E5")
+fn 全局.api()
+fn Lottie.loaddex()
+sss 联系客服="http://www.ayjrw.cn/lx"
+/.
+源码介绍:
+本源码由By隐心独家开发,有需要技术服务联系微信:grnb69(备注:iapp,否则不加)
+软件已经申请软件著作权,并即将上架应用商店,经过发现未保留原作者版权,一律按侵权算！
+
+后端源码联系作者获取！</eventItme><eventItme type="loadingComplete">fr("@json/mian.json",data)
+fn Lottie.setImageLottie(2,data,0,true)
+fc("@tjt/echarts.min.js","$智链图床/echarts.min.js",成功)
+t()
+{
+	stop(1300)
+	ufnsui()
+	{
+		ss(sss.api+"/zc/bs.txt",接口)
+		t()
+		{
+			hs(接口,sss.内容)
+			ufnsui()
+			{
+				fr("$智链图床/1.txt",内容)
+				f(内容=="1")
+				{
+					fr("$账号.txt",username)
+					fr("$密码.txt",password)
+					f(username==""||password=="")
+					{
+						uigo("登录.iyu")
+						end()
+					}
+					else
+					{
+						ss(sss.api+"/api/zhdl.php",apiUrl)
+						t() {
+							s postData = "{\"username\":\"" + username + "\", \"password\":\"" + password + "\"}"
+							s headers = "Content-Type=application/json;charset=utf-8||User-Agent=Mozilla/5.0"
+							hs(apiUrl, postData, "utf-8", result)
+							syso(result)
+							ufnsui()
+							{
+								json(result, jo)
+								json(jo, "get", "code", a)
+								syso(a)
+								json(jo, "get", "msg", b)
+								syso(b)
+								f(b?"成功")
+								{
+									uigo("主页.iyu")
+									end()
+								}
+								else
+								{
+									uigo("登录.iyu")
+									end()
+								}
+							}
+						}
+					}
+					
+				}
+				else
+				{
+					addv(3,"隐私政策.iyu")
+				}
+			}
+		}
+	}
+}</eventItme></UIEventset>

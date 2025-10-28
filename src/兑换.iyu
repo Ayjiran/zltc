@@ -1,0 +1,1078 @@
+<View id="235" did="0" type="Toolbar">
+<ppt>width=-1
+height=48dp
+background=white
+app_title=会员充值
+app_TitleColor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="214" did="0" type="CoordinatorLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="142" did="214" type="RelativeLayout">
+<ppt>width=-1
+height=-1
+gravity=right</ppt>
+<event></event>
+</View>
+<View id="1" did="142" type="LinearLayout">
+<ppt>width=-1
+orientation=vertical
+height=-1
+background=white
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="6" did="1" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="5" did="6" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="7" did="5" type="ScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="49" did="7" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="8" did="49" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white
+</ppt>
+<event></event>
+</View>
+<View id="216" did="8" type="CardView">
+<ppt>width=-1
+height=-2
+layout_margin=10dp
+app_CardElevation=5dp
+app_CardcornerRadius=10dp
+</ppt>
+<event></event>
+</View>
+<View id="223" did="216" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="195" did="223" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=@garbage_main_page_bg.png</ppt>
+<event></event>
+</View>
+<View id="192" did="195" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal
+gravity=center_vertical
+layout_marginBottom=30dp
+layout_marginTop=10dp</ppt>
+<event></event>
+</View>
+<View id="200" did="192" type="RelativeLayout">
+<ppt>width=70dp
+height=70dp
+gravity=center
+layout_margin=10dp</ppt>
+<event></event>
+</View>
+<View id="203" did="200" type="RelativeLayout">
+<ppt>width=70dp
+height=70dp
+layout_margin=1.5dp
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="202" did="203" type="RoundImageView">
+<ppt>src=@b/R_k_mtx_png.png
+width=60dp
+height=60dp
+layout_margin=1.5dp
+scaleType=centercrop</ppt>
+<event></event>
+</View>
+<View id="276" did="203" type="RoundImageView">
+<ppt>src=@tou.PNG
+width=60dp
+height=60dp
+layout_margin=1.5dp
+scaleType=centercrop</ppt>
+<event></event>
+</View>
+<View id="194" did="200" type="CardView">
+<ppt>width=40dp
+height=40dp
+app_CardcornerRadius=20dp
+app_CardElevation=2dp
+layout_margin=10dp
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="9" did="192" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+textcolor=#ffffff
+textsize=17sp
+textStyle=bold</ppt>
+<event></event>
+</View>
+<View id="198" did="192" type="TextView">
+<ppt>width=-2
+height=-2
+text=
+layout_weight=1</ppt>
+<event></event>
+</View>
+<View id="197" did="192" type="ImageView">
+<ppt>width=60dp
+height=40dp
+src=@btn_message_card_chat.png
+layout_marginRight=10dp
+visibility=gone</ppt>
+<event><eventItme type="clicki">sj(sss.当前用户数据,"会员(",")会员",会员)
+f(sss.dqsj&gt;会员)
+{
+  f(sss.广告会员=="是")
+  {
+    sss wz=sss.微信客服地址
+    uigo("浏览.iyu")
+  }
+  else
+  {
+    s stop = 2000
+    s text="客服仅为会员服务~"
+    fn color.ColorToast(text,stop)
+  }
+}
+else
+{
+  sss wz=sss.微信客服地址
+  uigo("浏览.iyu")
+}
+fr("$幻隐网络/点击特效/开.txt",anyx)
+f(anyx &gt; "0")
+{
+  bfm("$幻隐网络/配置/djyx.mp3")
+}
+/.sss txurl="https://img2.baidu.com/it/u=587919348,527169898&fm=253&fmt=auto&app=138&f=JPEG?w=501&h=500"
+sss user="独爱隐心"
+sss xxid="1"
+uigo("交流.iyu")./</eventItme></event>
+</View>
+<View id="217" did="195" type="TextView">
+<ppt>width=-2
+height=-2
+text=会员到期时间
+textColor=#FFFFFF
+textsize=16sp
+layout_marginleft=10dp
+layout_marginRight=10dp
+textIsSelectable=true
+layout_marginBottom=10dp
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="225" did="223" type="CardView">
+<ppt>width=-1
+height=30dp
+ut_alignParentBottom=true
+layout_marginRight=10dp
+layout_marginLeft=10dp
+</ppt>
+<event></event>
+</View>
+<View id="224" did="225" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="226" did="224" type="TextView">
+<ppt>width=-2
+height=-2
+text=-加载用户充值记录中…-
+textColor=#ff00aeff
+textSize=13sp</ppt>
+<event></event>
+</View>
+<View id="273" did="223" type="ImageView">
+<ppt>width=150dp
+height=150dp
+src=@tou.PNG
+ut_alignParentRight=true
+layout_marginRight=-30dp
+layout_marginBottom=-30dp
+ut_alignParentBottom=true</ppt>
+<event></event>
+</View>
+<View id="188" did="8" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal
+</ppt>
+<event></event>
+</View>
+<View id="190" did="188" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=horizontal
+</ppt>
+<event></event>
+</View>
+<View id="245" did="190" type="LinearLayout">
+<ppt>width=-2
+height=-2
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="191" did="245" type="TabLayout">
+<ppt>width=-2
+height=-2
+app_tabList=会员开通
+tabSelect=0
+app_tabIndicatorColor=#ff008cff
+app_tabIndicatorHeight=3.5dp
+app_tabTextColor=#80000000||#ff008cff
+app_tabMode=0
+layout_marginLeft=10dp
+</ppt>
+<event><eventItme type="ontabselected">gvs(214,id)
+f(st_tT=="会员开通")
+{
+  
+}
+else f(st_tT=="金币充值")
+{
+  
+}</eventItme></event>
+</View>
+<View id="241" did="190" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+gravity=right|center
+</ppt>
+<event></event>
+</View>
+<View id="242" did="241" type="CardView">
+<ppt>width=100dp
+height=30dp
+app_CardElevation=0
+app_CardBackgroundColor=#13000cb6
+app_CardcornerRadius=30dp
+layout_marginRight=-20dp</ppt>
+<event></event>
+</View>
+<View id="243" did="242" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event><eventItme type="clicki">fr("$账号.txt", user)
+ss(sss.api+"/api/pay.php?name="+user,sss.wz)
+uigo("浏览.iyu")</eventItme></event>
+</View>
+<View id="244" did="243" type="TextView">
+<ppt>width=-2
+height=-2
+text=余额充值
+textSize=13sp
+textColor=#ff0e00a4
+textStyle=bold
+layout_marginRight=10dp</ppt>
+<event></event>
+</View>
+<View id="236" did="8" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+</ppt>
+<event></event>
+</View>
+<View id="10" did="236" type="TextView">
+<ppt>width=-2
+height=-2
+text=开通VIP会员，即可享用所有权限会员功能，体验不同的风花雪月，享受不一样的网络体验！\n
+layout_margintop=15dp
+textsize=12sp
+layout_marginright=25dp
+textcolor=#888888
+layout_marginLeft=20dp
+</ppt>
+<event></event>
+</View>
+<View id="221" did="236" type="CardView">
+<ppt>width=-1
+height=-1
+layout_margin=10dp
+app_CardElevation=2dp
+app_CardcornerRadius=5dp</ppt>
+<event></event>
+</View>
+<View id="204" did="221" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="205" did="204" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical</ppt>
+<event></event>
+</View>
+<View id="153" did="205" type="LinearLayout">
+<ppt>width=-1
+height=150dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="154" did="153" type="HorizontalScrollView">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="155" did="154" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=horizontal
+padding=15dp</ppt>
+<event></event>
+</View>
+<View id="260" did="155" type="LinearLayout">
+<ppt>width=-2
+height=-1
+orientation=vertical
+layout_margin=10dp
+background=@IMG_20210109_171040.png
+gravity=center
+visibility=gone</ppt>
+<event><eventItme type="clicki">uzd(sss.zd,50)
+sss 会员充值中="会员"
+us(100,"text","广告会员")
+us(260,"background","@IMG_20210109_171040.png")
+us(156,"background","#56e9e9e9")
+us(172,"background","#56e9e9e9")
+us(176,"background","#56e9e9e9")
+us(184,"background","#56e9e9e9")
+us(180,"background","#56e9e9e9")
+sss rmb=sss.广告会员金额
+us(183,"text","一年")
+us(179,"text","三个月")
+us(175,"text","一个月")
+sss 充值时间="gg.php"
+sss 成功成功记录="广告"
+fr("$幻隐网络/点击特效/开.txt"
+,anyx)
+f(anyx &gt; "0")
+{
+  bfm("$幻隐网络/配置/djyx.mp3")
+}</eventItme></event>
+</View>
+<View id="261" did="260" type="TextView">
+<ppt>width=-2
+height=-2
+text=广告去除
+textColor=#000000
+textSize=15sp
+</ppt>
+<event></event>
+</View>
+<View id="262" did="260" type="TextView">
+<ppt>width=-2
+height=-2
+text=¥9.99
+textColor=#000000
+textSize=30sp
+typeface=serif
+layout_marginRight=10dp
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="263" did="260" type="TextView">
+<ppt>width=-2
+height=-2
+text=永久纯净
+textColor=#ff888888
+textSize=12sp</ppt>
+<event></event>
+</View>
+<View id="156" did="155" type="LinearLayout">
+<ppt>width=-2
+height=-1
+orientation=vertical
+layout_margin=10dp
+background=#56e9e9e9
+gravity=center</ppt>
+<event><eventItme type="clicki">uzd(sss.zd,50)
+us(156,"background","@IMG_20210109_171040.png")
+us(172,"background","#56e9e9e9")
+us(260,"background","#56e9e9e9")
+us(176,"background","#56e9e9e9")
+us(184,"background","#56e9e9e9")
+us(180,"background","#56e9e9e9")
+ss 金额="58.88"
+ss 时间="30"</eventItme></event>
+</View>
+<View id="159" did="156" type="TextView">
+<ppt>width=-2
+height=-2
+text=月费会员
+textColor=#000000
+textSize=15sp
+</ppt>
+<event></event>
+</View>
+<View id="158" did="156" type="TextView">
+<ppt>width=-2
+height=-2
+text=¥58.88
+textColor=#000000
+textSize=30sp
+typeface=serif
+layout_marginRight=10dp
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="157" did="156" type="TextView">
+<ppt>width=-2
+height=-2
+text=30/天
+textColor=#ff888888
+textSize=12sp</ppt>
+<event></event>
+</View>
+<View id="172" did="155" type="LinearLayout">
+<ppt>width=-2
+height=-1
+orientation=vertical
+layout_margin=10dp
+background=#56e9e9e9
+gravity=center
+</ppt>
+<event><eventItme type="clicki">uzd(sss.zd,50)
+us(156,"background","#56e9e9e9")
+us(172,"background","@IMG_20210109_171040.png")
+us(176,"background","#56e9e9e9")
+us(184,"background","#56e9e9e9")
+us(260,"background","#56e9e9e9")
+us(180,"background","#56e9e9e9")
+ss 金额="120"
+ss 时间="90"</eventItme></event>
+</View>
+<View id="173" did="172" type="TextView">
+<ppt>width=-2
+height=-2
+text=季费会员
+textColor=#000000
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="174" did="172" type="TextView">
+<ppt>width=-2
+height=-2
+text=¥120.00
+textColor=#000000
+textSize=30sp
+typeface=serif
+layout_marginRight=10dp
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="175" did="172" type="TextView">
+<ppt>width=-2
+height=-2
+text=90/天
+textColor=#ff888888
+textSize=12sp</ppt>
+<event></event>
+</View>
+<View id="176" did="155" type="LinearLayout">
+<ppt>width=-2
+height=-1
+orientation=vertical
+layout_margin=10dp
+background=#56e9e9e9
+gravity=center</ppt>
+<event><eventItme type="clicki">uzd(sss.zd,50)
+us(156,"background","#56e9e9e9")
+us(172,"background","#56e9e9e9")
+us(176,"background","@IMG_20210109_171040.png")
+us(184,"background","#56e9e9e9")
+us(260,"background","#56e9e9e9")
+us(180,"background","#56e9e9e9")
+ss 金额="210"
+ss 时间="180"</eventItme></event>
+</View>
+<View id="177" did="176" type="TextView">
+<ppt>width=-2
+height=-2
+text=半年会员
+textColor=#000000
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="178" did="176" type="TextView">
+<ppt>width=-2
+height=-2
+text=¥210.00
+textColor=#000000
+textSize=30sp
+typeface=serif
+layout_marginRight=10dp
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="179" did="176" type="TextView">
+<ppt>width=-2
+height=-2
+text=180/天
+textColor=#ff888888
+textSize=12sp</ppt>
+<event></event>
+</View>
+<View id="180" did="155" type="LinearLayout">
+<ppt>width=-2
+height=-1
+orientation=vertical
+layout_margin=10dp
+background=#56e9e9e9
+gravity=center</ppt>
+<event><eventItme type="clicki">uzd(sss.zd,50)
+us(156,"background","#56e9e9e9")
+us(172,"background","#56e9e9e9")
+us(176,"background","#56e9e9e9")
+us(260,"background","#56e9e9e9")
+us(184,"background","#56e9e9e9")
+us(180,"background","@IMG_20210109_171040.png")
+ss 金额="399.99"
+ss 时间="365"</eventItme></event>
+</View>
+<View id="181" did="180" type="TextView">
+<ppt>width=-2
+height=-2
+text=年费会员
+textColor=#000000
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="182" did="180" type="TextView">
+<ppt>width=-2
+height=-2
+text=¥399.99
+textColor=#000000
+textSize=30sp
+typeface=serif
+layout_marginRight=10dp
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="183" did="180" type="TextView">
+<ppt>width=-2
+height=-2
+text=365/天
+textColor=#ff888888
+textSize=12sp</ppt>
+<event></event>
+</View>
+<View id="184" did="155" type="LinearLayout">
+<ppt>width=-2
+height=-1
+orientation=vertical
+layout_margin=10dp
+background=#56e9e9e9
+</ppt>
+<event></event>
+</View>
+<View id="246" did="184" type="RelativeLayout">
+<ppt>width=-1
+height=-1</ppt>
+<event></event>
+</View>
+<View id="247" did="246" type="LinearLayout">
+<ppt>width=-2
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event><eventItme type="clicki">uzd(sss.zd,50)
+us(156,"background","#56e9e9e9")
+us(172,"background","#56e9e9e9")
+us(260,"background","#56e9e9e9")
+us(176,"background","#56e9e9e9")
+us(184,"background","@IMG_20210109_171040.png")
+us(180,"background","#56e9e9e9")
+ss 金额="698.88"
+ss 时间="99999"</eventItme></event>
+</View>
+<View id="185" did="247" type="TextView">
+<ppt>width=-2
+height=-2
+text=永久会员
+textColor=#000000
+textSize=15sp</ppt>
+<event></event>
+</View>
+<View id="186" did="247" type="TextView">
+<ppt>width=-2
+height=-2
+text=¥698.88
+textColor=#000000
+textSize=30sp
+typeface=serif
+layout_marginRight=10dp
+layout_marginLeft=10dp</ppt>
+<event></event>
+</View>
+<View id="187" did="247" type="TextView">
+<ppt>width=-2
+height=-2
+text=超值套餐
+textColor=#ff888888
+textSize=12sp</ppt>
+<event></event>
+</View>
+<View id="248" did="246" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@sq_list_biaoqian_tj.png
+ut_alignParentRight=true
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="138" did="204" type="LinearLayout">
+<ppt>width=-1
+height=70dp
+orientation=horizontal
+gravity=center
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="139" did="138" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@6.26/membership_with_year_icon.png.v
+layout_weight=1</ppt>
+<event><eventItme type="clicki">us(100,"text","原价：140元/年")</eventItme></event>
+</View>
+<View id="140" did="138" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@6.26/membership_with_quarter_icon.png.v
+layout_weight=1</ppt>
+<event><eventItme type="clicki">us(100,"text","原价：32元/季")</eventItme></event>
+</View>
+<View id="141" did="138" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@6.26/membership_with_month_icon.png.v
+layout_weight=1</ppt>
+<event><eventItme type="clicki">us(100,"text","原价：12元/月")</eventItme></event>
+</View>
+<View id="222" did="204" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="57" did="222" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+gravity=center
+background=white</ppt>
+<event></event>
+</View>
+<View id="58" did="57" type="LinearLayout">
+<ppt>width=-2
+height=-2</ppt>
+<event></event>
+</View>
+<View id="59" did="57" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+orientation=horizontal
+layout_marginLeft=10dp
+layout_marginRight=10dp
+background=white</ppt>
+<event></event>
+</View>
+<View id="60" did="59" type="TextView">
+<ppt>width=-1
+height=-1
+text=开通VIP有哪些特权？
+textsize=14sp
+textcolor=#888888
+gravity=center_vertical
+layout_weight=1
+</ppt>
+<event></event>
+</View>
+<View id="61" did="59" type="ImageView">
+<ppt>width=40dp
+height=40dp
+src=@a/sex_male_check_icon.v
+padding=10dp
+</ppt>
+<event><eventItme type="clicki">gvs(214,id)
+ 
+ 
+ 
+f(ss.开关=="开")
+{
+  ss 开关="关"
+  us(65,"visibility","visible")
+  us(62,"visibility","visible")
+  us(61,"src","@a/sex_female_check_icon.v")
+}
+else
+{
+  ss 开关="开"
+  us(61,"src","@a/sex_male_check_icon.v")
+  us(65,"visibility",8)
+  us(62,"visibility",8)
+}
+</eventItme></event>
+</View>
+<View id="65" did="57" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+layout_margintop=5dp
+layout_marginbottom=10dp
+visibility=gone</ppt>
+<event></event>
+</View>
+<View id="66" did="65" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="67" did="66" type="TextView">
+<ppt>width=-1
+height=-1
+text=功能免费
+gravity=center
+layout_weight=1
+textcolor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="68" did="66" type="TextView">
+<ppt>width=-1
+height=-1
+text=功能更多
+gravity=center
+layout_weight=1
+textcolor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="69" did="66" type="TextView">
+<ppt>width=-1
+height=-1
+text=尊贵象征
+gravity=center
+layout_weight=1
+textcolor=#FF2196F3
+</ppt>
+<event></event>
+</View>
+<View id="70" did="66" type="TextView">
+<ppt>width=-1
+height=-1
+text=更多特权
+gravity=center
+layout_weight=1
+textcolor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="71" did="65" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+orientation=horizontal</ppt>
+<event></event>
+</View>
+<View id="72" did="71" type="TextView">
+<ppt>width=-1
+height=-1
+text=文件上限
+gravity=center
+layout_weight=1
+textcolor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="73" did="71" type="TextView">
+<ppt>width=-1
+height=-1
+text=文件分类
+gravity=center
+layout_weight=1
+textcolor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="74" did="71" type="TextView">
+<ppt>width=-1
+height=-1
+text=官方对接
+gravity=center
+layout_weight=1
+textcolor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="75" did="71" type="TextView">
+<ppt>width=-1
+height=-1
+text=文件加密
+gravity=center
+layout_weight=1
+textcolor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="62" did="57" type="TextView">
+<ppt>width=-1
+height=1
+text=
+background=#e0e0e0
+visibility=8</ppt>
+<event></event>
+</View>
+<View id="113" did="57" type="LinearLayout">
+<ppt>width=-1
+height=-2
+orientation=vertical
+layout_margintop=5dp
+layout_marginbottom=10dp
+visibility=8</ppt>
+<event></event>
+</View>
+<View id="126" did="113" type="TextView">
+<ppt>width=-2
+height=-2
+text=若开通遇到问题，可联系官方客服\n·查看询问或解决\n·开通会员即可使用多种功能\n会员期间：充了这个会员，在使用的期间，全部功能免费无上限使用！\n&lt;可以充值试试，也许会爱上我&gt;\n所有会员一经出售，概不退换！\n有什么问题直接问管理/作者，免费解答！
+textColor=#ff444444
+layout_marginLeft=20dp
+layout_marginRight=20dp
+textSize=12sp</ppt>
+<event></event>
+</View>
+<View id="124" did="57" type="TextView">
+<ppt>width=-1
+height=1
+text=
+background=#e0e0e0
+visibility=8</ppt>
+<event></event>
+</View>
+<View id="89" did="57" type="LinearLayout">
+<ppt>width=-1
+height=-2
+layout_marginleft=-10dp</ppt>
+<event></event>
+</View>
+<View id="90" did="89" type="ImageView">
+<ppt>width=-2
+height=-2
+src=@212908.v
+scaletype=centercrop</ppt>
+<event></event>
+</View>
+<View id="264" did="236" type="ImageView">
+<ppt>width=-1
+height=-2
+src=@m0z.png
+layout_gravity=center
+layout_marginTop=10dp
+layout_marginBottom=80dp</ppt>
+<event></event>
+</View>
+<View id="274" did="6" type="CardView">
+<ppt>width=-1
+height=-2
+ut_alignParentBottom=true
+layout_margin=10dp
+app_CardcornerRadius=5dp
+app_CardElevation=2dp</ppt>
+<event></event>
+</View>
+<View id="271" did="274" type="LinearLayout">
+<ppt>width=-1
+height=40dp
+orientation=vertical
+background=@garbage_main_page_bg.png
+gravity=center</ppt>
+<event><eventItme type="clicki">fr("$账号.txt", username)
+fr("$密码.txt", password)
+ss("username=" + username + "&password=" + password + "&amount="+ss.金额+"&days="+ss.时间, post_data)
+stobm(post_data, "utf-8", encoded_data)
+utw(null,"","兑换中…","",true,vf)
+{
+}
+
+t()
+{
+	s api_url = sss.api+"/api/duihuan.php"
+	hs(api_url, encoded_data, "utf-8", result, err)
+	json(err,内容)
+	json(内容, "get","msg", msg)
+	ufnsui()
+	{
+		f(msg?"成功")
+		{
+			endutw(vf)
+			sss 兑换成功="是"
+			end()
+		}
+		else
+		{
+			tw(msg)
+			endutw(vf)
+		}
+	}
+}</eventItme></event>
+</View>
+<View id="272" did="271" type="TextView">
+<ppt>width=-2
+height=-2
+text=立 即 兑 换
+textColor=#ffffffff
+textStyle=bold
+textSize=18sp</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">fn 全局.状态栏()
+fn 全局.api()
+fn 全局.储存路径()
+fn Lottie.loaddex()
+s id=235
+utb(id)
+java(mTba, activity, "android.support.v7.app.AppCompatActivity.getSupportActionBar")
+java(null, mTba, "android.support.v7.app.ToolbarActionBar.setDisplayHomeAsUpEnabled", "boolean", true)
+//设置左边为返回键
+utb("left", id, "@coolbackhei.png")
+utb("set", "leftck", id)
+{
+  uzd(震动器, 30)
+  end()
+  }
+fr("$颜色.txt",颜色)
+fn 着色.控件着色(id,颜色)
+fr("$账号.txt", username)
+us(9,"text",username)
+us(276,"src",sss.头像)
+
+us(156,"background","@IMG_20210109_171040.png")
+us(172,"background","#56e9e9e9")
+us(260,"background","#56e9e9e9")
+us(176,"background","#56e9e9e9")
+us(184,"background","#56e9e9e9")
+us(180,"background","#56e9e9e9")
+ss 金额="58.88"
+ss 时间="30"</eventItme><eventItme type="destroy">sss 支付内容="无"
+sss 金币充值="无"</eventItme><eventItme type="loadingComplete">fr("@Box/yue.json",data)
+fn Lottie.setImageLottie(267,data,0,true)
+fr("@json/vip.json",data)
+fn Lottie.setImageLottie(273,data,-1,true)
+sran(100,999,ksk)
+f(ksk&lt;"200")
+{
+	s 会员="一个季会员"
+}
+else f(ksk&lt;"400")
+{
+	s 会员="一个月会员"
+}
+else f(ksk&lt;"600")
+{
+	s 会员="一年会员"
+}
+else f(ksk&lt;"800")
+{
+	sran(50,500,金币)
+	ss(金币+"余额",会员)
+}
+else
+{
+	sran(50,500,卡券)
+	ss(卡券+"余额",会员)
+}
+dht(scf,0,0,0,100)
+dh(scf,"duration",500)
+us(226,"dh",scf)
+ss("感谢ID："+ksk+"**充值"+会员,k)
+us(226,"text",k)
+dht(scf,0,0,100,0)
+dh(scf,"duration",500)
+us(226,"dh",scf)
+t()
+{
+	w(true)
+	{
+		sran(3000,5000,随机)
+		stop(随机)
+		ufnsui()
+		{
+			sran(100,999,ksk)
+			f(ksk&lt;"200")
+			{
+				s 会员="一个季会员"
+			}
+			else f(ksk&lt;"400")
+			{
+				s 会员="一个月会员"
+			}
+			else f(ksk&lt;"600")
+			{
+				s 会员="一年会员"
+			}
+			else f(ksk&lt;"800")
+			{
+				sran(50,5000,金币)
+				ss(金币+"余额",会员)
+			}
+			else
+			{
+				sran(50,500,卡券)
+				ss(卡券+"余额",会员)
+			}
+			dht(scf,0,0,0,100)
+			dh(scf,"duration",500)
+			us(226,"dh",scf)
+			ss("感谢ID："+ksk+"**充值"+会员,k)
+			us(226,"text",k)
+			dht(scf,0,0,100,0)
+			dh(scf,"duration",500)
+			us(226,"dh",scf)
+		}
+	}
+}</eventItme><eventItme type="menu">case 问题反馈:
+sss wz=sss.联系客服
+uigo("浏览.iyu")
+break
+
+case 拒绝退款:
+ss(sss.api+"tk.html",tk)
+sss wz=tk
+uigo("浏览.iyu")
+break</eventItme></UIEventset>

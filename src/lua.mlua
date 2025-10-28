@@ -1,0 +1,10 @@
+
+--lua.mlua模块
+function files(uri)
+import "android.provider.MediaStore$Images$Media"
+local proj = i:sl(Media.DATA,":")
+local cursor = activity:managedQuery(uri,proj,nil,nil,nil)
+local column_index = cursor:getColumnIndexOrThrow(Media.DATA)
+cursor:moveToFirst()
+return cursor:getString(column_index)
+end

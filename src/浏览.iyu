@@ -1,0 +1,97 @@
+<View id="1" did="0" type="Toolbar">
+<ppt>width=-1
+height=48dp
+background=white
+app_title=加载中…
+app_TitleColor=#FF2196F3</ppt>
+<event></event>
+</View>
+<View id="13" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+background=white</ppt>
+<event></event>
+</View>
+<View id="18" did="13" type="ProgressBar">
+<ppt>width=-1
+height=2dp
+background=white</ppt>
+<event></event>
+</View>
+<View id="15" did="13" type="WebView">
+<ppt>width=-1
+height=-1
+url=
+</ppt>
+<event><eventItme type="onprogresschanged">t()
+{
+  for(0;st_nS)
+  {
+    us(18,"progress",st_nS)
+  }
+}</eventItme><eventItme type="onpagefinished">ug(15,"title",标题)
+us(1,"app_title",标题)
+f(sss.游戏=="是")
+{
+  sss 游戏="不"
+  uycl(true)
+  us(1,"visibility","gone")
+  us(18,"visibility","gone")
+}
+else
+{
+}</eventItme></event>
+</View>
+<UIEventset><eventItme type="loading">fn 全局.状态栏()
+ss exit="不"
+s id=1
+utb(id)
+java(mTba, activity, "android.support.v7.app.AppCompatActivity.getSupportActionBar")
+java(null, mTba, "android.support.v7.app.ToolbarActionBar.setDisplayHomeAsUpEnabled", "boolean", true)
+//设置左边为返回键
+utb("left", id, "@coolbackhei.png")
+utb("set", "leftck", id)
+{
+  uzd(震动器, 30)
+  end()
+}
+fr("$颜色.txt",颜色)
+fn 着色.控件着色(id,颜色)
+us(1,"app_title","加载中…")
+us(15,"url",sss.wz)
+gvs(15, 浏览器对象)
+java(浏览器属性, 浏览器对象, "android.webkit.WebView.getSettings")
+java(null, 浏览器属性, "android.webkit.WebSettings.setBuiltInZoomControls","boolean", false)
+</eventItme><eventItme type="menu">case 刷新:
+us(15,"url",sss.wz)
+break
+
+case 问题反馈:
+sss wz=sss.联系客服
+uigo("浏览.iyu")
+break
+
+case 浏览器打开:
+ug(15,"url",wz)
+hws(wz)
+break</eventItme><eventItme type="downkey">f(st_kC==4)
+{
+  ug(15,"cangoback",fh)
+  f(fh==true)
+  {
+    us(15, "gobackorforward", -1)
+  }
+  else
+  {
+    f(ss.exit=="不")
+    {
+      tw("再按一次退出！")
+      ss exit="是"
+    }
+    else
+    {
+      end()
+    }
+  }
+}</eventItme></UIEventset>
